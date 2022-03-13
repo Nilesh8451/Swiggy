@@ -24,6 +24,7 @@ function Food() {
           <View style={{marginVertical: 10, marginHorizontal: 15}}>
             <FlatList
               horizontal={true}
+              showsHorizontalScrollIndicator={false}
               data={[{}, {}, {}, {}, {}, {}, {}]}
               renderItem={({item}) => {
                 return (
@@ -100,6 +101,7 @@ function Food() {
             </View>
           </View>
           <FlatList
+              showsHorizontalScrollIndicator={false}
             data={[{}, {}, {}, {}]}
             renderItem={({item}) => {
               return (
@@ -177,7 +179,8 @@ function Food() {
 
         <FlatList
           style={{marginTop: 20}}
-          data={[{}, {}, {}, {}]}
+              showsHorizontalScrollIndicator={false}
+              data={[{}, {}, {}, {}]}
           renderItem={({item}) => {
             return (
               <View style={{marginVertical: 15}}>
@@ -219,7 +222,8 @@ function Food() {
 
         <FlatList
           style={{marginTop: 20, marginBottom: 20}}
-          data={[{}, {}, {}, {}, {}, {}]}
+              showsHorizontalScrollIndicator={false}
+              data={[{}, {}, {}, {}, {}, {}]}
           renderItem={({item}) => {
             return (
               <View style={{marginVertical: 10}}>
@@ -243,7 +247,8 @@ function Food() {
 
           <FlatList
             horizontal={true}
-            data={[{}, {}, {}, {}, {}]}
+              showsHorizontalScrollIndicator={false}
+              data={[{}, {}, {}, {}, {}]}
             renderItem={({item}) => {
               return (
                 <View style={{marginVertical: 10}}>
@@ -257,7 +262,8 @@ function Food() {
 
         <FlatList
           style={{marginTop: 20, marginBottom: 20}}
-          data={[{}, {}, {}, {}, {}, {}, {}]}
+              showsHorizontalScrollIndicator={false}
+              data={[{}, {}, {}, {}, {}, {}, {}]}
           renderItem={({item}) => {
             return (
               <View style={{marginVertical: 10}}>
@@ -281,7 +287,8 @@ function Food() {
 
           <FlatList
             horizontal={true}
-            data={[{}, {}, {}, {}, {}]}
+              showsHorizontalScrollIndicator={false}
+              data={[{}, {}, {}, {}, {}]}
             renderItem={({item}) => {
               return (
                 <View style={{marginVertical: 10}}>

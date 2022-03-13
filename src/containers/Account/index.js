@@ -70,14 +70,14 @@ function Account() {
               style={{flexDirection: 'row', justifyContent: 'space-between'}}>
               <CustomText
                 style={{fontWeight: '800', fontSize: 15, marginBottom: 5}}>
-                POOJA
+                NILESH
               </CustomText>
               <TouchableOpacity>
                 <CustomText style={{color: 'orange'}}>EDIT</CustomText>
               </TouchableOpacity>
             </View>
             <CustomText style={{fontSize: 12, color: 'gray'}}>
-              +91 - 9834931514 - pooja.lande@neosoftmail.com
+              +91 - 8451834334 - nilesh.chavan@gmail.com
             </CustomText>
           </View>
           {routes.map(route => {
@@ -87,7 +87,7 @@ function Account() {
 
         <View
           style={{paddingVertical: 5, backgroundColor: 'white', marginTop: 30}}>
-          <More name="LOGOUT OPTIONS" />
+          <More name="LOGOUT" />
         </View>
 
         <CustomText style={{fontSize:10,color:'gray',textAlign:'center',marginTop:30,marginBottom:100}}>

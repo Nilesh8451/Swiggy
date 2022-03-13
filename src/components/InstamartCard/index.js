@@ -21,43 +21,42 @@ const index = ({image}) => {
         <CustomText
           style={{
             fontSize: 12,
-            marginVertical: 5,
+            marginTop: 5,
             fontWeight: 'bold',
           }}>
-          Amul Taaza Milky Milk
+          Milky Milk Taza Milk
         </CustomText>
         <CustomText
           style={{
             fontSize: 12,
-
             color: 'gray',
           }}>
-          500ml
+          800ml
         </CustomText>
         <CustomText
           style={{
             fontSize: 12,
             fontWeight: 'bold',
           }}>
-          ₹25
+          Price: ₹90
         </CustomText>
       </View>
       <View
         style={{
-          backgroundColor: '#dddddd',
+          backgroundColor: 'gray',
           width: 30,
           height: 30,
           alignItems: 'center',
           justifyContent: 'center',
           position: 'absolute',
           borderRadius: 5,
-          marginBottom: -120,
+          // marginBottom: -120,
           top: -40,
           right: -10,
         }}>
         <CustomText
           style={{
-            color: 'green',
+            color: 'white',
             fontSize: 20,
             fontWeight: 'bold',
           }}>

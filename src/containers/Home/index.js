@@ -330,7 +330,8 @@ function Home() {
           Popular Brands
         </CustomText>
         <ScrollView
-          horizontal={true}
+              showsHorizontalScrollIndicator={false}
+              horizontal={true}
           style={{paddingLeft: 15, marginTop: 18, marginBottom: 30}}>
           {popularBrands.map((prod, index) => {
             return (
@@ -355,6 +356,7 @@ function Home() {
         </CustomText>
         <ScrollView
           horizontal={true}
+              showsHorizontalScrollIndicator={false}
           style={{paddingLeft: 15, marginTop: 18, marginBottom: 30}}>
           {curations.map((prod, index) => {
             return (
@@ -485,7 +487,8 @@ function Home() {
         </CustomText>
 
         <FlatList
-          data={[{}, {}, {}, {}, {}, {}]}
+              showsHorizontalScrollIndicator={false}
+              data={[{}, {}, {}, {}, {}, {}]}
           renderItem={({item}) => {
             return (
               <View style={{marginVertical: 20}}>

@@ -127,7 +127,8 @@ function Search() {
           Popular on instamart
         </CustomText>
         <ScrollView
-          horizontal={true}
+              showsHorizontalScrollIndicator={false}
+              horizontal={true}
           style={{paddingLeft: 15, marginTop: 18, marginBottom: 10}}>
           {curations.map((prod, index) => {
             return (
@@ -150,7 +151,8 @@ function Search() {
           Popular Cuisines
         </CustomText>
         <ScrollView
-          horizontal={true}
+              showsHorizontalScrollIndicator={false}
+              horizontal={true}
           style={{paddingLeft: 15, marginTop: 18, marginBottom: 30}}>
           {curations.map((prod, index) => {
             return (
