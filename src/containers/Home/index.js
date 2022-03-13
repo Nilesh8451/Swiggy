@@ -8,6 +8,8 @@ import Carousel from 'react-native-snap-carousel';
 import {CustomText} from '../../components/Text';
 import {TopPicCard} from './TopPicCard/index';
 import Icon from 'react-native-vector-icons/Fontisto';
+import PopularBrandsCard from './PopularBrands';
+import Seperator from '../../components/Seperator';
 
 function Home() {
   const data = [
@@ -124,6 +126,82 @@ function Home() {
       time: '29 mins',
     },
   ];
+
+  const popularBrands = [
+    ,
+    {
+      imageURI:
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWBQBuct-BxMJfyy3vtmqB7UzdDdoRN4SdYQ&usqp=CAU',
+      off: '90%',
+      upTo: '120',
+      name: "McDonald's",
+      time: '34 mins',
+    },
+    {
+      imageURI:
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWBQBuct-BxMJfyy3vtmqB7UzdDdoRN4SdYQ&usqp=CAU',
+      off: '90%',
+      upTo: '120',
+      name: 'Red Hot Chillies',
+      time: '29 mins',
+    },
+    {
+      imageURI:
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWBQBuct-BxMJfyy3vtmqB7UzdDdoRN4SdYQ&usqp=CAU',
+      off: '90%',
+      upTo: '120',
+      name: 'Red Hot Chillies',
+      time: '29 mins',
+    },
+    {
+      imageURI:
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWBQBuct-BxMJfyy3vtmqB7UzdDdoRN4SdYQ&usqp=CAU',
+      off: '90%',
+      upTo: '120',
+      name: 'Red Hot Chillies',
+      time: '29 mins',
+    },
+    {
+      imageURI:
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWBQBuct-BxMJfyy3vtmqB7UzdDdoRN4SdYQ&usqp=CAU',
+      off: '90%',
+      upTo: '120',
+      name: 'Red Hot Chillies',
+      time: '29 mins',
+    },
+    {
+      imageURI:
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWBQBuct-BxMJfyy3vtmqB7UzdDdoRN4SdYQ&usqp=CAU',
+      off: '90%',
+      upTo: '120',
+      name: 'Red Hot Chillies',
+      time: '29 mins',
+    },
+    {
+      imageURI:
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWBQBuct-BxMJfyy3vtmqB7UzdDdoRN4SdYQ&usqp=CAU',
+      off: '90%',
+      upTo: '120',
+      name: 'Red Hot Chillies',
+      time: '29 mins',
+    },
+    {
+      imageURI:
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWBQBuct-BxMJfyy3vtmqB7UzdDdoRN4SdYQ&usqp=CAU',
+      off: '90%',
+      upTo: '120',
+      name: 'Red Hot Chillies',
+      time: '29 mins',
+    },
+    {
+      imageURI:
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWBQBuct-BxMJfyy3vtmqB7UzdDdoRN4SdYQ&usqp=CAU',
+      off: '90%',
+      upTo: '120',
+      name: 'Red Hot Chillies',
+      time: '29 mins',
+    },
+  ];
   return (
     <View
       style={{
@@ -185,6 +263,30 @@ function Home() {
           style={{paddingLeft: 15, marginTop: 18, marginBottom: 30}}>
           {topPics.map((prod, index) => {
             return <TopPicCard key={index} {...prod} />;
+          })}
+        </ScrollView>
+
+        <Seperator />
+        <CustomText
+          style={{
+            paddingLeft: 15,
+            marginTop: 30,
+            marginBottom: 10,
+            fontWeight: '800',
+            fontSize: 16,
+          }}>
+          Popular Brands
+        </CustomText>
+        <ScrollView
+          horizontal={true}
+          style={{paddingLeft: 15, marginTop: 18, marginBottom: 30}}>
+          {popularBrands.map((prod, index) => {
+            return (
+              <View>
+                <PopularBrandsCard {...prod} />
+                <PopularBrandsCard {...prod} />
+              </View>
+            );
           })}
         </ScrollView>
       </ScrollView>

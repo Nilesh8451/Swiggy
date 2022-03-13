@@ -32,7 +32,7 @@ export const TopPicCard = props => {
               {props.off} OFF
             </CustomText>
             <CustomText style={{color: 'white', opacity: 0.9, fontSize: 9}}>
-              UPTO {props.upTo}
+              UPTO ₹{props.upTo}
             </CustomText>
           </>
         ) : null}
