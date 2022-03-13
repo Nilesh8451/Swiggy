@@ -8,7 +8,7 @@ const index = () => {
     <View style={{paddingHorizontal: 15, flexDirection: 'row'}}>
       <View>
         <Image
-          style={{width: 80, height: 80}}
+          style={{width: 80, height: 100, borderRadius: 5}}
           source={{
             uri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUXc7PKmThijqe5yuxq2xs5g0412oUKVB0yg&usqp=CAU',
           }}
@@ -18,7 +18,6 @@ const index = () => {
             backgroundColor: 'white',
             width: 70,
             height: 30,
-            // padding: 5,
             paddingHorizontal: 5,
             marginTop: -26,
             marginLeft: 5,
@@ -51,8 +50,7 @@ const index = () => {
           justifyContent: 'center',
         }}>
         <CustomText style={{fontSize: 16, fontWeight: 'bold'}}>
-          {' '}
-          Absolute China{' '}
+          Absolute China
         </CustomText>
 
         <View style={{flexDirection: 'row', alignItems: 'center'}}>
@@ -64,7 +62,7 @@ const index = () => {
         <CustomText style={{fontSize: 12, color: 'gray'}}>
           Pizzas fast food
         </CustomText>
-        <CustomText style={{fontSize: 12, color: 'gray'}}> Kothrud </CustomText>
+        <CustomText style={{fontSize: 12, color: 'gray'}}>Kothrud</CustomText>
       </View>
     </View>
   );

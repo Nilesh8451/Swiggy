@@ -1,5 +1,5 @@
 import React from 'react';
-import {Text, View, Image, ScrollView} from 'react-native';
+import {Text, View, Image, ScrollView, FlatList} from 'react-native';
 import {ADS} from '../../components/Ads';
 import LocationHeader from '../../components/LocationHeader';
 import {CategoryCard} from '../../components/CategoryCard';
@@ -8,9 +8,11 @@ import Carousel from 'react-native-snap-carousel';
 import {CustomText} from '../../components/Text';
 import {TopPicCard} from './TopPicCard/index';
 import Icon from 'react-native-vector-icons/Fontisto';
+import Icon2 from 'react-native-vector-icons/MaterialIcons';
 import PopularBrandsCard from './PopularBrands';
 import Seperator from '../../components/Seperator';
 import CurationsCard from './PopularCurations';
+import FoodCard from '../../components/FoodCard';
 
 function Home() {
   const data = [
@@ -367,6 +369,57 @@ function Home() {
             );
           })}
         </ScrollView>
+
+        <Seperator />
+        <View
+          style={{
+            flexDirection: 'row',
+            paddingLeft: 15,
+            marginTop: 30,
+            alignItems: 'center',
+            marginBottom: 5,
+          }}>
+          <View
+            style={{
+              width: 25,
+              height: 25,
+              borderRadius: 30,
+              borderWidth: 1,
+              justifyContent: 'center',
+              alignItems: 'center',
+            }}>
+            <Icon2 name="restaurant" size={15} color="black" />
+          </View>
+          <CustomText
+            style={{
+              fontWeight: '800',
+              fontSize: 16,
+              marginLeft: 10,
+            }}>
+            All Restaurants Nearby
+          </CustomText>
+        </View>
+        <CustomText
+          style={{
+            paddingLeft: 15,
+            marginTop: 0,
+            marginBottom: 10,
+            fontSize: 14,
+            color: 'gray',
+          }}>
+          Discover unique taste near you
+        </CustomText>
+
+        <FlatList
+          data={[{}, {}, {}, {}, {}, {}]}
+          renderItem={({item}) => {
+            return (
+              <View style={{marginVertical: 20}}>
+                <FoodCard />
+              </View>
+            );
+          }}
+        />
       </ScrollView>
     </View>
   );

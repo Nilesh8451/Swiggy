@@ -29,11 +29,11 @@ const More = props => {
         {props.isMore ? (
           <Icon
             name={clicked ? 'arrow-up' : 'arrow-down'}
-            size={15}
+            size={12}
             color="gray"
           />
         ) : (
-          <Icon name="arrow-right" size={15} color="gray" />
+          <Icon name="arrow-right" size={12} color="gray" />
         )}
       </TouchableOpacity>
       {props.isMore && clicked ? (
@@ -58,7 +58,7 @@ const More = props => {
                     <CustomText>{l.name}</CustomText>
                   </View>
                   <View>
-                    <Icon name="arrow-right" size={15} color="gray" />
+                    <Icon name="arrow-right" size={12} color="gray" />
                   </View>
                 </TouchableOpacity>
               );
