@@ -20,7 +20,7 @@ export const BottomTab = () => {
           },
         })}>
         <Tab.Screen
-          name="Home"
+          name="Swiggy"
           component={Home}
           options={({route, navigation}) => {
             return {
