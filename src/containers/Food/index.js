@@ -4,11 +4,13 @@ import LocationHeader from '../../components/LocationHeader';
 import FoodCard from '../../components/FoodCard';
 import {CustomText} from '../../components/Text';
 import Icon2 from 'react-native-vector-icons/MaterialCommunityIcons';
+import Icon from 'react-native-vector-icons/FontAwesome5';
+import Seperator from '../../components/Seperator';
 
 function Food() {
   return (
-    <View style={{flex: 1}}>
-      <View style={{paddingHorizontal: 15}}>
+    <View style={{flex: 1, backgroundColor: 'white'}}>
+      <View style={{paddingHorizontal: 15, paddingTop: 10}}>
         <LocationHeader />
       </View>
       <ScrollView>
@@ -18,32 +20,7 @@ function Food() {
             borderWidth: 0.5,
             marginVertical: 5,
           }}></View>
-        <View>
-          <View
-            style={{
-              flexDirection: 'row',
-              justifyContent: 'space-between',
-              paddingHorizontal: 15,
-            }}>
-            <CustomText style={{color: 'gray', fontSize: 12}}>
-              ALL RESTAURANT
-            </CustomText>
-            <View
-              style={{flexDirection: 'row', justifyContent: 'space-between'}}>
-              <Icon2 name="sort" size={20} color="black" />
-              <CustomText style={{color: 'gray', fontSize: 12, marginLeft: 5}}>
-                sort/filter
-              </CustomText>
-            </View>
-          </View>
-
-          <View
-            style={{
-              borderColor: '#dddddd',
-              borderWidth: 0.3,
-              marginVertical: 5,
-            }}></View>
-
+        <View style={{marginBottom: 20}}>
           <View style={{marginVertical: 10, marginHorizontal: 15}}>
             <FlatList
               horizontal={true}
@@ -61,14 +38,15 @@ function Food() {
                           marginVertical: 10,
                           borderRadius: 5,
                         }}>
-                        <Icon2
+                        <Icon
                           style={{
                             marginTop: 15,
                             position: 'absolute',
-                            marginLeft: 15,
+                            // marginLeft: 15,
+                            alignSelf: 'center',
                           }}
-                          name="wallet-membership"
-                          size={20}
+                          name="medal"
+                          size={22}
                           color="black"
                         />
                       </View>
@@ -80,7 +58,7 @@ function Food() {
                           width: 50,
                           textAlign: 'center',
                         }}>
-                        Offers near you
+                        Top Rated
                       </CustomText>
                       <Text numberOfLines={2}></Text>
                     </View>
@@ -88,6 +66,38 @@ function Food() {
                 );
               }}
             />
+          </View>
+
+          <View
+            style={{
+              flexDirection: 'row',
+              justifyContent: 'space-between',
+              paddingHorizontal: 15,
+            }}>
+            <CustomText
+              style={{
+                color: 'black',
+                fontSize: 10,
+                opacity: 0.5,
+                letterSpacing: 1.5,
+              }}>
+              ALL RESTAURANT
+            </CustomText>
+            <View
+              style={{
+                flexDirection: 'row',
+                justifyContent: 'space-between',
+                alignItems: 'center',
+              }}>
+              <Icon2
+                name="sort-alphabetical-descending"
+                size={20}
+                color="black"
+              />
+              <CustomText style={{color: 'gray', fontSize: 12, marginLeft: 5}}>
+                SORT / FILTER
+              </CustomText>
+            </View>
           </View>
           <FlatList
             data={[{}, {}, {}, {}]}
@@ -100,51 +110,62 @@ function Food() {
             }}
           />
         </View>
-        <View
-          style={{
-            borderColor: 'black',
-            borderWidth: 0.3,
-            marginVertical: 1,
-            marginHorizontal: 15,
-          }}></View>
+        <Seperator />
         <View style={{marginVertical: 10}}>
           <CustomText
             style={{paddingHorizontal: 15, marginTop: 20, fontWeight: 'bold'}}>
-            Popular Brands
+            Restaurants Curated For
           </CustomText>
 
           <FlatList
             horizontal={true}
+            showsHorizontalScrollIndicator={false}
             data={[{}, {}, {}, {}, {}, {}]}
             renderItem={({item}) => {
               return (
-                <View style={{marginVertical: 10, marginHorizontal: 10}}>
+                <View
+                  style={{
+                    marginVertical: 10,
+                    marginHorizontal: 10,
+                    alignItems: 'center',
+                  }}>
                   <View
                     style={{
-                      width: 60,
-                      height: 60,
-                      // overflow: 'hidden',
                       borderRadius: 50,
-                      backgroundColor: 'red',
+                      backgroundColor: '#aebafe',
                       alignItems: 'center',
                       justifyContent: 'center',
+                      padding: 10,
                     }}>
                     <Image
                       style={{width: 60, height: 60, borderRadius: 50}}
                       source={{
-                        uri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0Jk1d3h24fYYxkPNMOu0gRVrR8Ls5tkduLb55o1jFHXvoo3OtSZjGY9QK2oK6aJCcOdU&usqp=CAU',
+                        uri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRsMdn2-IxcOJuLHR0w8TeIs0_bHRAXXWNuA&usqp=CAU',
                       }}
                     />
                   </View>
                   <CustomText
                     // numberOfLines={1}
                     style={{
-                      color: 'gray',
                       fontSize: 12,
                       width: 70,
                       textAlign: 'center',
+                      marginTop: 7,
+                      fontWeight: '800',
                     }}>
-                    DOMINO'S PIZZA
+                    BIRYANI
+                  </CustomText>
+
+                  <CustomText
+                    // numberOfLines={1}
+                    style={{
+                      fontSize: 9,
+                      width: 70,
+                      textAlign: 'center',
+                      marginTop: 10,
+                      color: 'gray',
+                    }}>
+                    10 OPTIONS
                   </CustomText>
                 </View>
               );
@@ -152,100 +173,21 @@ function Food() {
           />
         </View>
 
-        <View
-          style={{
-            borderColor: 'black',
-            borderWidth: 0.3,
-            marginVertical: 1,
-            marginHorizontal: 15,
-          }}></View>
+        <Seperator />
+
         <FlatList
-          data={[{}, {}]}
+          style={{marginTop: 20}}
+          data={[{}, {}, {}, {}]}
           renderItem={({item}) => {
             return (
-              <View style={{marginVertical: 10}}>
+              <View style={{marginVertical: 15}}>
                 <FoodCard />
               </View>
             );
           }}
         />
 
-        <View
-          style={{
-            borderColor: 'black',
-            borderWidth: 0.3,
-            marginVertical: 10,
-            marginHorizontal: 15,
-          }}></View>
-        <View>
-          <CustomText
-            style={{paddingHorizontal: 15, marginTop: 20, fontWeight: 'bold'}}>
-            Restaurants Current For
-          </CustomText>
-
-          <FlatList
-            horizontal={true}
-            data={[{}, {}, {}, {}, {}, {}]}
-            renderItem={({item}) => {
-              return (
-                <View style={{marginVertical: 10, marginHorizontal: 10}}>
-                  <View
-                    style={{
-                      width: 60,
-                      height: 60,
-                      // overflow: 'hidden',
-                      borderRadius: 50,
-                      backgroundColor: 'red',
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                    }}>
-                    <Image
-                      style={{width: 60, height: 60, borderRadius: 50}}
-                      source={{
-                        uri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0Jk1d3h24fYYxkPNMOu0gRVrR8Ls5tkduLb55o1jFHXvoo3OtSZjGY9QK2oK6aJCcOdU&usqp=CAU',
-                      }}
-                    />
-                  </View>
-                  <CustomText
-                    // numberOfLines={1}
-                    style={{
-                      color: 'gray',
-                      fontSize: 12,
-                      width: 70,
-                      textAlign: 'center',
-                    }}>
-                    DOMINO'S PIZZA
-                  </CustomText>
-                </View>
-              );
-            }}
-          />
-        </View>
-
-        <View
-          style={{
-            borderColor: 'black',
-            borderWidth: 0.3,
-            marginVertical: 1,
-            marginHorizontal: 15,
-          }}></View>
-        <FlatList
-          data={[{}, {}, {}, {}, {}]}
-          renderItem={({item}) => {
-            return (
-              <View style={{marginVertical: 10}}>
-                <FoodCard />
-              </View>
-            );
-          }}
-        />
-        <View
-          style={{
-            borderColor: 'black',
-            borderWidth: 0.3,
-            marginVertical: 1,
-            marginHorizontal: 15,
-          }}></View>
+        <Seperator />
 
         <View style={{marginVertical: 20, marginBottom: 30, paddingright: 15}}>
           <CustomText
@@ -254,11 +196,14 @@ function Food() {
               marginTop: 20,
               fontWeight: 'bold',
               marginVertical: 10,
+              fontSize: 18,
+              marginBottom: 20,
             }}>
             Only on Swiggy
           </CustomText>
 
           <FlatList
+            showsHorizontalScrollIndicator={false}
             horizontal={true}
             data={[{}, {}, {}, {}, {}]}
             renderItem={({item}) => {
@@ -270,14 +215,10 @@ function Food() {
             }}
           />
         </View>
-        <View
-          style={{
-            borderColor: 'black',
-            borderWidth: 0.3,
-            marginVertical: 1,
-            marginHorizontal: 15,
-          }}></View>
+        <Seperator />
+
         <FlatList
+          style={{marginTop: 20, marginBottom: 20}}
           data={[{}, {}, {}, {}, {}, {}]}
           renderItem={({item}) => {
             return (
@@ -287,13 +228,7 @@ function Food() {
             );
           }}
         />
-        <View
-          style={{
-            borderColor: 'black',
-            borderWidth: 0.3,
-            marginVertical: 1,
-            marginHorizontal: 15,
-          }}></View>
+        <Seperator />
 
         <View style={{marginVertical: 20, marginBottom: 30, paddingright: 15}}>
           <CustomText
@@ -318,15 +253,10 @@ function Food() {
             }}
           />
         </View>
-        <View
-          style={{
-            borderColor: 'black',
-            borderWidth: 0.3,
-            marginVertical: 1,
-            marginHorizontal: 15,
-          }}></View>
+        <Seperator />
 
         <FlatList
+          style={{marginTop: 20, marginBottom: 20}}
           data={[{}, {}, {}, {}, {}, {}, {}]}
           renderItem={({item}) => {
             return (
@@ -336,13 +266,7 @@ function Food() {
             );
           }}
         />
-        <View
-          style={{
-            borderColor: 'black',
-            borderWidth: 0.3,
-            marginVertical: 1,
-            marginHorizontal: 15,
-          }}></View>
+        <Seperator />
 
         <View style={{marginVertical: 20, marginBottom: 30, paddingright: 15}}>
           <CustomText
@@ -352,7 +276,7 @@ function Food() {
               fontWeight: 'bold',
               marginVertical: 10,
             }}>
-            What's New
+            WHAT'S NEW
           </CustomText>
 
           <FlatList
@@ -367,73 +291,6 @@ function Food() {
             }}
           />
         </View>
-        <View
-          style={{
-            borderColor: 'black',
-            borderWidth: 0.3,
-            marginVertical: 1,
-            marginHorizontal: 15,
-          }}></View>
-
-        <FlatList
-          data={[{}, {}, {}, {}, {}, {}, {}]}
-          renderItem={({item}) => {
-            return (
-              <View style={{marginVertical: 10}}>
-                <FoodCard />
-              </View>
-            );
-          }}
-        />
-        <View
-          style={{
-            borderColor: 'black',
-            borderWidth: 0.3,
-            marginVertical: 1,
-            marginHorizontal: 15,
-          }}></View>
-
-        <View style={{marginVertical: 20, marginBottom: 30, paddingright: 15}}>
-          <CustomText
-            style={{
-              paddingHorizontal: 15,
-              marginTop: 20,
-              fontWeight: 'bold',
-              marginVertical: 10,
-            }}>
-            Vegetarian Option
-          </CustomText>
-
-          <FlatList
-            horizontal={true}
-            data={[{}, {}, {}, {}, {}]}
-            renderItem={({item}) => {
-              return (
-                <View style={{marginVertical: 10}}>
-                  <FoodCard />
-                </View>
-              );
-            }}
-          />
-        </View>
-        <View
-          style={{
-            borderColor: 'black',
-            borderWidth: 0.3,
-            marginVertical: 1,
-            marginHorizontal: 15,
-          }}></View>
-
-        <FlatList
-          data={[{}, {}, {}, {}, {}, {}, {}, {}, {}, {}]}
-          renderItem={({item}) => {
-            return (
-              <View style={{marginVertical: 10}}>
-                <FoodCard />
-              </View>
-            );
-          }}
-        />
       </ScrollView>
     </View>
   );
