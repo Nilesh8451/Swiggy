@@ -10,6 +10,7 @@ import {TopPicCard} from './TopPicCard/index';
 import Icon from 'react-native-vector-icons/Fontisto';
 import PopularBrandsCard from './PopularBrands';
 import Seperator from '../../components/Seperator';
+import CurationsCard from './PopularCurations';
 
 function Home() {
   const data = [
@@ -202,6 +203,59 @@ function Home() {
       time: '29 mins',
     },
   ];
+
+  const curations = [
+    {
+      name: 'Gifts For Occasion',
+      imageURI:
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGTB8X0lJN1Blpe9aos9c8-Oj7lZ0J_pDrgw&usqp=CAU',
+    },
+    {
+      name: 'Gifts For Occasion',
+      imageURI:
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGTB8X0lJN1Blpe9aos9c8-Oj7lZ0J_pDrgw&usqp=CAU',
+    },
+    {
+      name: 'Gifts For Occasion',
+      imageURI:
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGTB8X0lJN1Blpe9aos9c8-Oj7lZ0J_pDrgw&usqp=CAU',
+    },
+    {
+      name: 'Gifts For Occasion',
+      imageURI:
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGTB8X0lJN1Blpe9aos9c8-Oj7lZ0J_pDrgw&usqp=CAU',
+    },
+    {
+      name: 'Gifts For Occasion',
+      imageURI:
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGTB8X0lJN1Blpe9aos9c8-Oj7lZ0J_pDrgw&usqp=CAU',
+    },
+    {
+      name: 'Gifts For Occasion',
+      imageURI:
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGTB8X0lJN1Blpe9aos9c8-Oj7lZ0J_pDrgw&usqp=CAU',
+    },
+    {
+      name: 'Gifts For Occasion',
+      imageURI:
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGTB8X0lJN1Blpe9aos9c8-Oj7lZ0J_pDrgw&usqp=CAU',
+    },
+    {
+      name: 'Gifts For Occasion',
+      imageURI:
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGTB8X0lJN1Blpe9aos9c8-Oj7lZ0J_pDrgw&usqp=CAU',
+    },
+    {
+      name: 'Gifts For Occasion',
+      imageURI:
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGTB8X0lJN1Blpe9aos9c8-Oj7lZ0J_pDrgw&usqp=CAU',
+    },
+    {
+      name: 'Gifts For Occasion',
+      imageURI:
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGTB8X0lJN1Blpe9aos9c8-Oj7lZ0J_pDrgw&usqp=CAU',
+    },
+  ];
   return (
     <View
       style={{
@@ -285,6 +339,30 @@ function Home() {
               <View>
                 <PopularBrandsCard {...prod} />
                 <PopularBrandsCard {...prod} />
+              </View>
+            );
+          })}
+        </ScrollView>
+
+        <Seperator />
+        <CustomText
+          style={{
+            paddingLeft: 15,
+            marginTop: 30,
+            marginBottom: 10,
+            fontWeight: '800',
+            fontSize: 16,
+          }}>
+          Popular Curations
+        </CustomText>
+        <ScrollView
+          horizontal={true}
+          style={{paddingLeft: 15, marginTop: 18, marginBottom: 30}}>
+          {curations.map((prod, index) => {
+            return (
+              <View>
+                <CurationsCard {...prod} />
+                <CurationsCard {...prod} />
               </View>
             );
           })}
