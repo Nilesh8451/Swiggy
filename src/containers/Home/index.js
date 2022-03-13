@@ -498,6 +498,75 @@ function Home() {
             );
           }}
         />
+
+        <View
+          style={{
+            marginTop: 50,
+            paddingTop: 60,
+            paddingBottom: 50,
+            backgroundColor: '#F4F4F5',
+            paddingLeft: 20,
+          }}>
+          <CustomText
+            style={{
+              fontSize: 60,
+              fontWeight: '900',
+              color: 'gray',
+              opacity: 0.3,
+            }}>
+            LIVE
+          </CustomText>
+          <CustomText
+            style={{
+              fontSize: 60,
+              fontWeight: '900',
+              color: 'gray',
+              opacity: 0.3,
+              marginTop: -35,
+            }}>
+            FOR
+          </CustomText>
+          <CustomText
+            style={{
+              fontSize: 60,
+              fontWeight: '900',
+              color: 'gray',
+              opacity: 0.3,
+              marginTop: -35,
+            }}>
+            FOOD
+          </CustomText>
+
+          <CustomText
+            style={{
+              fontSize: 12,
+              color: 'gray',
+              opacity: 0.4,
+              marginTop: 30,
+              fontWeight: '700',
+            }}>
+            MADE BY FOOD LOVERS
+          </CustomText>
+
+          <CustomText
+            style={{
+              fontSize: 12,
+              color: 'gray',
+              opacity: 0.4,
+              fontWeight: '700',
+            }}>
+            SWIGGY HQ. BANGALORE
+          </CustomText>
+
+          <View
+            style={{
+              width: 80,
+              height: 2,
+              backgroundColor: 'gray',
+              opacity: 0.2,
+              marginTop: 30,
+            }}></View>
+        </View>
       </ScrollView>
     </View>
   );
