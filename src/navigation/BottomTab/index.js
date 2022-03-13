@@ -1,5 +1,4 @@
 import React from 'react';
-import {Text, View, Image} from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import Home from '../../containers/Home';
@@ -7,6 +6,10 @@ import Food from '../../containers/Food';
 import Instamart from '../../containers/Instamart';
 import Search from '../../containers/Search';
 import Account from '../../containers/Account';
+import Icon from 'react-native-vector-icons/AntDesign';
+import Icon2 from 'react-native-vector-icons/MaterialIcons';
+import Icon3 from 'react-native-vector-icons/AntDesign';
+import Icon4 from 'react-native-vector-icons/MaterialCommunityIcons';
 
 const Tab = createBottomTabNavigator();
 
@@ -26,28 +29,16 @@ export const BottomTab = () => {
             return {
               tabBarLabelStyle: navigation.isFocused()
                 ? {
-                    color: '#8cb133',
+                    color: 'black',
                     fontSize: 12,
                   }
-                : {color: '#402E00', fontSize: 12},
+                : {color: 'gray', fontSize: 12},
 
               tabBarIcon: ({focused}) =>
                 focused ? (
-                  <Image
-                    resizeMode="contain"
-                    style={{height: 25, width: 25}}
-                    source={{
-                      uri: 'https://cdn.iconscout.com/icon/free/png-256/swiggy-1543564-1306067.png',
-                    }}
-                  />
+                  <Icon name="home" size={25} color="black" />
                 ) : (
-                  <Image
-                    resizeMode="contain"
-                    style={{height: 25, width: 25}}
-                    source={{
-                      uri: 'https://cdn.iconscout.com/icon/free/png-256/swiggy-1543564-1306067.png',
-                    }}
-                  />
+                  <Icon name="home" size={25} color="gray" />
                 ),
               headerShown: false,
             };
@@ -60,27 +51,15 @@ export const BottomTab = () => {
             return {
               tabBarLabelStyle: navigation.isFocused()
                 ? {
-                    color: '#8cb133',
+                    color: 'black',
                     fontSize: 12,
                   }
-                : {color: '#402E00', fontSize: 12},
+                : {color: 'gray', fontSize: 12},
               tabBarIcon: ({focused}) =>
                 focused ? (
-                  <Image
-                    resizeMode="contain"
-                    style={{height: 30, width: 30}}
-                    source={{
-                      uri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeahVBxW16kypJUTRFKvTPbEqqQ9WwY_Jbow&usqp=CAU',
-                    }}
-                  />
+                  <Icon2 name="fastfood" size={25} color="black" />
                 ) : (
-                  <Image
-                    resizeMode="contain"
-                    style={{height: 30, width: 30}}
-                    source={{
-                      uri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeahVBxW16kypJUTRFKvTPbEqqQ9WwY_Jbow&usqp=CAU',
-                    }}
-                  />
+                  <Icon2 name="fastfood" size={25} color="gray" />
                 ),
               headerShown: false,
             };
@@ -93,27 +72,15 @@ export const BottomTab = () => {
             return {
               tabBarLabelStyle: navigation.isFocused()
                 ? {
-                    color: '#8cb133',
+                    color: 'black',
                     fontSize: 12,
                   }
-                : {color: '#402E00', fontSize: 12},
+                : {color: 'gray', fontSize: 12},
               tabBarIcon: ({focused}) =>
                 focused ? (
-                  <Image
-                    resizeMode="contain"
-                    style={{height: 25, width: 25}}
-                    source={{
-                      uri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcU_TZlS5bsFofSMrlOWjaPnK3QcZryKmOUA&usqp=CAU',
-                    }}
-                  />
+                  <Icon2 name="fiber-smart-record" size={25} color="black" />
                 ) : (
-                  <Image
-                    resizeMode="contain"
-                    style={{height: 25, width: 25}}
-                    source={{
-                      uri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcU_TZlS5bsFofSMrlOWjaPnK3QcZryKmOUA&usqp=CAU',
-                    }}
-                  />
+                  <Icon2 name="fiber-smart-record" size={25} color="gray" />
                 ),
               headerShown: false,
             };
@@ -126,27 +93,15 @@ export const BottomTab = () => {
             return {
               tabBarLabelStyle: navigation.isFocused()
                 ? {
-                    color: '#8cb133',
+                    color: 'black',
                     fontSize: 12,
                   }
-                : {color: '#402E00', fontSize: 12},
+                : {color: 'gray', fontSize: 12},
               tabBarIcon: ({focused}) =>
                 focused ? (
-                  <Image
-                    resizeMode="contain"
-                    style={{height: 25, width: 25}}
-                    source={{
-                      uri: `https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnwD9A6g8PSNT7fyMuZsywBgDSqWUPKgQWpA&usqp=CAU`,
-                    }}
-                  />
+                  <Icon3 name="search1" size={25} color="black" />
                 ) : (
-                  <Image
-                    resizeMode="contain"
-                    style={{height: 25, width: 25}}
-                    source={{
-                      uri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnwD9A6g8PSNT7fyMuZsywBgDSqWUPKgQWpA&usqp=CAU',
-                    }}
-                  />
+                  <Icon3 name="search1" size={25} color="gray" />
                 ),
               headerShown: false,
             };
@@ -159,27 +114,15 @@ export const BottomTab = () => {
             return {
               tabBarLabelStyle: navigation.isFocused()
                 ? {
-                    color: '#8cb133',
+                    color: 'black',
                     fontSize: 12,
                   }
-                : {color: '#402E00', fontSize: 12},
+                : {color: 'gray', fontSize: 12},
               tabBarIcon: ({focused}) =>
                 focused ? (
-                  <Image
-                    resizeMode="contain"
-                    style={{height: 20, width: 20}}
-                    source={{
-                      uri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQsQh8tvclNkrB57vus8zpRAo72kuSDkBOXQ&usqp=CAU',
-                    }}
-                  />
+                  <Icon4 name="account" size={25} color="black" />
                 ) : (
-                  <Image
-                    resizeMode="contain"
-                    style={{height: 20, width: 20}}
-                    source={{
-                      uri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQsQh8tvclNkrB57vus8zpRAo72kuSDkBOXQ&usqp=CAU',
-                    }}
-                  />
+                  <Icon4 name="account" size={25} color="gray" />
                 ),
               headerShown: false,
             };
