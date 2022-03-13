@@ -9,10 +9,13 @@ import {CustomText} from '../../components/Text';
 import {TopPicCard} from './TopPicCard/index';
 import Icon from 'react-native-vector-icons/Fontisto';
 import Icon2 from 'react-native-vector-icons/MaterialIcons';
+import Icon3 from 'react-native-vector-icons/MaterialCommunityIcons';
+import Icon4 from 'react-native-vector-icons/SimpleLineIcons';
 import PopularBrandsCard from './PopularBrands';
 import Seperator from '../../components/Seperator';
 import CurationsCard from './PopularCurations';
 import FoodCard from '../../components/FoodCard';
+import ProductCard from '../../components/ProductCard';
 
 function Home() {
   const data = [
@@ -265,7 +268,7 @@ function Home() {
         backgroundColor: 'white',
       }}>
       <ScrollView>
-        <View style={{paddingHorizontal: 15}}>
+        <View style={{paddingHorizontal: 15, marginTop: 10}}>
           <LocationHeader />
           <View style={{marginTop: 10}}>
             <ADS />
@@ -369,6 +372,81 @@ function Home() {
             );
           })}
         </ScrollView>
+
+        <Seperator />
+        <View
+          style={{
+            flexDirection: 'row',
+            alignItems: 'center',
+            justifyContent: 'space-between',
+            paddingRight: 10,
+          }}>
+          <View>
+            <View
+              style={{
+                flexDirection: 'row',
+                paddingLeft: 15,
+                marginTop: 30,
+                alignItems: 'center',
+                marginBottom: 5,
+              }}>
+              <View
+                style={{
+                  width: 25,
+                  height: 25,
+                  borderRadius: 30,
+                  borderWidth: 1,
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                }}>
+                <Icon3 name="torch" size={15} color="black" />
+              </View>
+              <CustomText
+                style={{
+                  fontWeight: '800',
+                  fontSize: 16,
+                  marginLeft: 10,
+                }}>
+                In the Spotlight
+              </CustomText>
+            </View>
+            <CustomText
+              style={{
+                paddingLeft: 15,
+                marginTop: 0,
+                marginBottom: 10,
+                fontSize: 14,
+                color: 'gray',
+              }}>
+              Explore sponsored partner brands
+            </CustomText>
+          </View>
+          <View style={{flexDirection: 'row', alignItems: 'center'}}>
+            <CustomText>See All</CustomText>
+            <View
+              style={{
+                marginLeft: 8,
+                padding: 5,
+                backgroundColor: 'orange',
+                borderRadius: 30,
+              }}>
+              <Icon4 name="arrow-right" size={10} color="white" />
+            </View>
+          </View>
+        </View>
+        <FlatList
+          horizontal={true}
+          style={{paddingLeft: 15}}
+          data={[{}, {}, {}, {}, {}, {}]}
+          renderItem={({item}) => {
+            return (
+              <View style={{marginVertical: 20}}>
+                <ProductCard />
+                <ProductCard />
+              </View>
+            );
+          }}
+        />
 
         <Seperator />
         <View
