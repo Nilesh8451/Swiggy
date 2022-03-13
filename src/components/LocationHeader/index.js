@@ -11,7 +11,7 @@ function LocationHeader() {
         <View style={{flexDirection: 'row', alignItems: 'center'}}>
           <Icon name="location" size={25} color="#900" />
           <CustomText style={{fontWeight: '900', fontSize: 17, marginLeft: 5}}>
-            Bhayander East
+            101/30
           </CustomText>
         </View>
         <CustomText
