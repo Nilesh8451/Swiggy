@@ -21,17 +21,29 @@ export const TopPicCard = props => {
             style={{
               width: 74,
               height: 85,
-              backgroundColor: 'rgba(0,0,0,0.5)',
+              backgroundColor: 'rgba(0,0,0,0.4)',
               position: 'absolute',
             }}></View>
         ) : null}
         {props.off ? (
           <>
             <CustomText
-              style={{color: 'white', fontWeight: '800', fontSize: 12}}>
+              style={{
+                color: 'white',
+                fontWeight: '800',
+                fontSize: 12,
+                marginLeft: 5,
+              }}>
               {props.off} OFF
             </CustomText>
-            <CustomText style={{color: 'white', opacity: 0.9, fontSize: 9}}>
+            <CustomText
+              style={{
+                color: 'white',
+                opacity: 0.9,
+                fontSize: 9,
+                marginLeft: 5,
+                fontWeight: '600',
+              }}>
               UPTO ₹{props.upTo}
             </CustomText>
           </>

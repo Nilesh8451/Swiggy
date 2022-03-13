@@ -3,11 +3,9 @@ import {Text, View, Image, ScrollView, FlatList} from 'react-native';
 import {ADS} from '../../components/Ads';
 import LocationHeader from '../../components/LocationHeader';
 import {CategoryCard} from '../../components/CategoryCard';
-import {SaleCard} from '../../components/SaleCard';
-import Carousel from 'react-native-snap-carousel';
 import {CustomText} from '../../components/Text';
 import {TopPicCard} from './TopPicCard/index';
-import Icon from 'react-native-vector-icons/Fontisto';
+import Icon from 'react-native-vector-icons/Foundation';
 import Icon2 from 'react-native-vector-icons/MaterialIcons';
 import Icon3 from 'react-native-vector-icons/MaterialCommunityIcons';
 import Icon4 from 'react-native-vector-icons/SimpleLineIcons';
@@ -21,32 +19,32 @@ function Home() {
   const data = [
     {
       imgSrc:
-        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQ83QWZQTc2CRx8a52hIZkObf-04P1zB4-QQ&usqp=CAU',
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSx5XJ4dufb81k9jpKc8WYzWNM6tdlJYdwOg&usqp=CAU',
       title: 'Food',
     },
     {
       imgSrc:
-        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQ83QWZQTc2CRx8a52hIZkObf-04P1zB4-QQ&usqp=CAU',
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMIu-TinU1W0uA5YLLtXoZKXGjgzIEK8aNtw&usqp=CAU',
       title: 'Instamart',
     },
     {
       imgSrc:
-        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQ83QWZQTc2CRx8a52hIZkObf-04P1zB4-QQ&usqp=CAU',
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSx5XJ4dufb81k9jpKc8WYzWNM6tdlJYdwOg&usqp=CAU',
       title: 'Genie',
     },
     {
       imgSrc:
-        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQ83QWZQTc2CRx8a52hIZkObf-04P1zB4-QQ&usqp=CAU',
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMIu-TinU1W0uA5YLLtXoZKXGjgzIEK8aNtw&usqp=CAU',
       title: 'Meat Stores',
     },
     {
       imgSrc:
-        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQ83QWZQTc2CRx8a52hIZkObf-04P1zB4-QQ&usqp=CAU',
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSx5XJ4dufb81k9jpKc8WYzWNM6tdlJYdwOg&usqp=CAU',
       title: 'Moments',
     },
     {
       imgSrc:
-        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQ83QWZQTc2CRx8a52hIZkObf-04P1zB4-QQ&usqp=CAU',
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSx5XJ4dufb81k9jpKc8WYzWNM6tdlJYdwOg&usqp=CAU',
       title: 'Health Hub',
     },
     {
@@ -56,28 +54,40 @@ function Home() {
     },
     {
       imgSrc:
-        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQ83QWZQTc2CRx8a52hIZkObf-04P1zB4-QQ&usqp=CAU',
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSx5XJ4dufb81k9jpKc8WYzWNM6tdlJYdwOg&usqp=CAU',
       title: 'Speciality Stores',
     },
-  ];
-
-  const offerData = [
-    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2epi8rpNSNSSUCd4Lz-BXs7oK8tCgnWoxCQ&usqp=CAU',
-    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUa7O_OGQ-gzkFhllibzg1EYMQFj9ZMpLS1A&usqp=CAU',
   ];
 
   const topPics = [
     {
       imageURI:
-        'https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/wfjvzbsyjruydaozbnzo',
-      off: '90%',
-      upTo: '120',
-      name: 'Red Hot Chillies',
-      time: '29 mins',
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnoNyuIRCzGhCL9bpCshxhOlflQ4yZETjKYw&usqp=CAU',
+      off: '60%',
+      upTo: '80',
+      name: 'Spicy Red Chilly',
+      time: '35 mins',
     },
     {
       imageURI:
-        'https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/wfjvzbsyjruydaozbnzo',
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFIfJCtuWW9P-wF2vRvvI2COOs8zmB_IHwtQ&usqp=CAU',
+      off: '70%',
+      upTo: '190',
+      name: 'Red Hot Chillies',
+      time: '85 mins',
+    },
+    {
+      imageURI:
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFIfJCtuWW9P-wF2vRvvI2COOs8zmB_IHwtQ&usqp=CAU',
+      // off:'10%',
+      // upTo:'10',
+      name: 'The Thali',
+      time: '34 mins',
+    },
+
+    {
+      imageURI:
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFIfJCtuWW9P-wF2vRvvI2COOs8zmB_IHwtQ&usqp=CAU',
       off: '50%',
       upTo: '110',
       name: 'Fried Nation',
@@ -85,7 +95,7 @@ function Home() {
     },
     {
       imageURI:
-        'https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/wfjvzbsyjruydaozbnzo',
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnoNyuIRCzGhCL9bpCshxhOlflQ4yZETjKYw&usqp=CAU',
       // off:'10%',
       // upTo:'10',
       name: 'The Thali',
@@ -109,23 +119,7 @@ function Home() {
     },
     {
       imageURI:
-        'https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/wfjvzbsyjruydaozbnzo',
-      off: '90%',
-      upTo: '120',
-      name: 'Red Hot Chillies',
-      time: '29 mins',
-    },
-    {
-      imageURI:
-        'https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/wfjvzbsyjruydaozbnzo',
-      // off:'10%',
-      // upTo:'10',
-      name: 'The Thali',
-      time: '34 mins',
-    },
-    {
-      imageURI:
-        'https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/wfjvzbsyjruydaozbnzo',
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnoNyuIRCzGhCL9bpCshxhOlflQ4yZETjKYw&usqp=CAU',
       off: '90%',
       upTo: '120',
       name: 'Red Hot Chillies',
@@ -134,18 +128,41 @@ function Home() {
   ];
 
   const popularBrands = [
-    ,
     {
       imageURI:
-        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWBQBuct-BxMJfyy3vtmqB7UzdDdoRN4SdYQ&usqp=CAU',
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSE7l5PsxDNg6eF4Vtsyl4rV7KASYpQEI93aA&usqp=CAU',
       off: '90%',
       upTo: '120',
-      name: "McDonald's",
+      name: 'Pizza Hut',
       time: '34 mins',
     },
     {
       imageURI:
-        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWBQBuct-BxMJfyy3vtmqB7UzdDdoRN4SdYQ&usqp=CAU',
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSE7l5PsxDNg6eF4Vtsyl4rV7KASYpQEI93aA&usqp=CAU',
+      off: '90%',
+      upTo: '120',
+      name: 'Pizza Hut',
+      time: '29 mins',
+    },
+    {
+      imageURI:
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSE7l5PsxDNg6eF4Vtsyl4rV7KASYpQEI93aA&usqp=CAU',
+      off: '90%',
+      upTo: '120',
+      name: 'Pizza Hut',
+      time: '29 mins',
+    },
+    {
+      imageURI:
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSE7l5PsxDNg6eF4Vtsyl4rV7KASYpQEI93aA&usqp=CAU',
+      off: '90%',
+      upTo: '120',
+      name: 'Pizza Hut',
+      time: '29 mins',
+    },
+    {
+      imageURI:
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSE7l5PsxDNg6eF4Vtsyl4rV7KASYpQEI93aA&usqp=CAU',
       off: '90%',
       upTo: '120',
       name: 'Red Hot Chillies',
@@ -153,7 +170,7 @@ function Home() {
     },
     {
       imageURI:
-        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWBQBuct-BxMJfyy3vtmqB7UzdDdoRN4SdYQ&usqp=CAU',
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSE7l5PsxDNg6eF4Vtsyl4rV7KASYpQEI93aA&usqp=CAU',
       off: '90%',
       upTo: '120',
       name: 'Red Hot Chillies',
@@ -161,7 +178,7 @@ function Home() {
     },
     {
       imageURI:
-        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWBQBuct-BxMJfyy3vtmqB7UzdDdoRN4SdYQ&usqp=CAU',
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUbnDBfSgzpVkWJH96cud7QE3wSgcCkB4q8g&usqp=CAU',
       off: '90%',
       upTo: '120',
       name: 'Red Hot Chillies',
@@ -169,7 +186,7 @@ function Home() {
     },
     {
       imageURI:
-        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWBQBuct-BxMJfyy3vtmqB7UzdDdoRN4SdYQ&usqp=CAU',
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUbnDBfSgzpVkWJH96cud7QE3wSgcCkB4q8g&usqp=CAU',
       off: '90%',
       upTo: '120',
       name: 'Red Hot Chillies',
@@ -177,31 +194,7 @@ function Home() {
     },
     {
       imageURI:
-        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWBQBuct-BxMJfyy3vtmqB7UzdDdoRN4SdYQ&usqp=CAU',
-      off: '90%',
-      upTo: '120',
-      name: 'Red Hot Chillies',
-      time: '29 mins',
-    },
-    {
-      imageURI:
-        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWBQBuct-BxMJfyy3vtmqB7UzdDdoRN4SdYQ&usqp=CAU',
-      off: '90%',
-      upTo: '120',
-      name: 'Red Hot Chillies',
-      time: '29 mins',
-    },
-    {
-      imageURI:
-        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWBQBuct-BxMJfyy3vtmqB7UzdDdoRN4SdYQ&usqp=CAU',
-      off: '90%',
-      upTo: '120',
-      name: 'Red Hot Chillies',
-      time: '29 mins',
-    },
-    {
-      imageURI:
-        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWBQBuct-BxMJfyy3vtmqB7UzdDdoRN4SdYQ&usqp=CAU',
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUbnDBfSgzpVkWJH96cud7QE3wSgcCkB4q8g&usqp=CAU',
       off: '90%',
       upTo: '120',
       name: 'Red Hot Chillies',
@@ -211,52 +204,52 @@ function Home() {
 
   const curations = [
     {
-      name: 'Gifts For Occasion',
+      name: 'Biryani',
+      imageURI:
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpzTUTSiZZ-cGftv_ao7nNeSC656Mb0Qohxw&usqp=CAU',
+    },
+    {
+      name: 'Pizza',
+      imageURI:
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTITXxQQ4cSLkQUGaG-qaxSq1ioDHTtwFYmWA&usqp=CAU',
+    },
+    {
+      name: 'Burger',
+      imageURI:
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkgAmwgy5AM6EkXt7HrK6YamrViu7RrjS0fA&usqp=CAU',
+    },
+    {
+      name: 'Biryani',
+      imageURI:
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpzTUTSiZZ-cGftv_ao7nNeSC656Mb0Qohxw&usqp=CAU',
+    },
+    {
+      name: 'Biryani',
+      imageURI:
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTITXxQQ4cSLkQUGaG-qaxSq1ioDHTtwFYmWA&usqp=CAU',
+    },
+    {
+      name: 'Biryani',
+      imageURI:
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpzTUTSiZZ-cGftv_ao7nNeSC656Mb0Qohxw&usqp=CAU',
+    },
+    {
+      name: 'Biryani',
+      imageURI:
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpzTUTSiZZ-cGftv_ao7nNeSC656Mb0Qohxw&usqp=CAU',
+    },
+    {
+      name: 'Biryani',
+      imageURI:
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpzTUTSiZZ-cGftv_ao7nNeSC656Mb0Qohxw&usqp=CAU',
+    },
+    {
+      name: 'Pizza',
       imageURI:
         'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGTB8X0lJN1Blpe9aos9c8-Oj7lZ0J_pDrgw&usqp=CAU',
     },
     {
-      name: 'Gifts For Occasion',
-      imageURI:
-        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGTB8X0lJN1Blpe9aos9c8-Oj7lZ0J_pDrgw&usqp=CAU',
-    },
-    {
-      name: 'Gifts For Occasion',
-      imageURI:
-        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGTB8X0lJN1Blpe9aos9c8-Oj7lZ0J_pDrgw&usqp=CAU',
-    },
-    {
-      name: 'Gifts For Occasion',
-      imageURI:
-        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGTB8X0lJN1Blpe9aos9c8-Oj7lZ0J_pDrgw&usqp=CAU',
-    },
-    {
-      name: 'Gifts For Occasion',
-      imageURI:
-        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGTB8X0lJN1Blpe9aos9c8-Oj7lZ0J_pDrgw&usqp=CAU',
-    },
-    {
-      name: 'Gifts For Occasion',
-      imageURI:
-        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGTB8X0lJN1Blpe9aos9c8-Oj7lZ0J_pDrgw&usqp=CAU',
-    },
-    {
-      name: 'Gifts For Occasion',
-      imageURI:
-        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGTB8X0lJN1Blpe9aos9c8-Oj7lZ0J_pDrgw&usqp=CAU',
-    },
-    {
-      name: 'Gifts For Occasion',
-      imageURI:
-        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGTB8X0lJN1Blpe9aos9c8-Oj7lZ0J_pDrgw&usqp=CAU',
-    },
-    {
-      name: 'Gifts For Occasion',
-      imageURI:
-        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGTB8X0lJN1Blpe9aos9c8-Oj7lZ0J_pDrgw&usqp=CAU',
-    },
-    {
-      name: 'Gifts For Occasion',
+      name: 'Pizza',
       imageURI:
         'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGTB8X0lJN1Blpe9aos9c8-Oj7lZ0J_pDrgw&usqp=CAU',
     },
@@ -279,7 +272,7 @@ function Home() {
             style={{
               flexDirection: 'row',
               flexWrap: 'wrap',
-              justifyContent: 'center',
+              justifyContent: 'flex-start',
               marginTop: 20,
             }}>
             {data.map((i, index) => {
@@ -302,23 +295,23 @@ function Home() {
             marginTop: 20,
           }}>
           <Image
-            style={{width: '100%', height: 200, borderRadius: 10}}
+            style={{width: '100%', height: 180, borderRadius: 10}}
             source={{
-              uri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2epi8rpNSNSSUCd4Lz-BXs7oK8tCgnWoxCQ&usqp=CAU',
+              uri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEanQp6wUDSAHZxDSPscLWhq-vwS-fGjP_Jw&usqp=CAU',
             }}
           />
         </View>
         <View
           style={{flexDirection: 'row', paddingLeft: 15, alignItems: 'center'}}>
-          <Icon name="like" size={20} color="black" />
-
-          <CustomText style={{marginLeft: 8, fontWeight: '700'}}>
+          <Icon4 name="like" size={20} color="black" />
+          <CustomText style={{marginLeft: 8, fontWeight: '800', fontSize: 15}}>
             Top Picks For You
           </CustomText>
         </View>
 
         <ScrollView
           horizontal={true}
+          showsHorizontalScrollIndicator={false}
           style={{paddingLeft: 15, marginTop: 18, marginBottom: 30}}>
           {topPics.map((prod, index) => {
             return <TopPicCard key={index} {...prod} />;
@@ -392,14 +385,14 @@ function Home() {
               }}>
               <View
                 style={{
-                  width: 25,
-                  height: 25,
+                  width: 22,
+                  height: 22,
                   borderRadius: 30,
                   borderWidth: 1,
                   justifyContent: 'center',
                   alignItems: 'center',
                 }}>
-                <Icon3 name="torch" size={15} color="black" />
+                <Icon name="lightbulb" size={15} color="black" />
               </View>
               <CustomText
                 style={{
@@ -422,19 +415,22 @@ function Home() {
             </CustomText>
           </View>
           <View style={{flexDirection: 'row', alignItems: 'center'}}>
-            <CustomText>See All</CustomText>
+            <CustomText style={{fontSize: 12, fontWeight: '600'}}>
+              SEE ALL
+            </CustomText>
             <View
               style={{
                 marginLeft: 8,
                 padding: 5,
-                backgroundColor: 'orange',
+                backgroundColor: '#FF7F50',
                 borderRadius: 30,
               }}>
-              <Icon4 name="arrow-right" size={10} color="white" />
+              <Icon4 name="arrow-right" size={12} color="white" />
             </View>
           </View>
         </View>
         <FlatList
+          showsHorizontalScrollIndicator={false}
           horizontal={true}
           style={{paddingLeft: 15}}
           data={[{}, {}, {}, {}, {}, {}]}
@@ -502,39 +498,39 @@ function Home() {
         <View
           style={{
             marginTop: 50,
-            paddingTop: 60,
-            paddingBottom: 50,
+            paddingTop: 50,
+            paddingBottom: 40,
             backgroundColor: '#F4F4F5',
             paddingLeft: 20,
           }}>
           <CustomText
             style={{
-              fontSize: 60,
+              fontSize: 80,
               fontWeight: '900',
               color: 'gray',
               opacity: 0.3,
             }}>
-            LIVE
+            𝐋𝐈𝐕𝐄
           </CustomText>
           <CustomText
             style={{
-              fontSize: 60,
+              fontSize: 80,
               fontWeight: '900',
               color: 'gray',
               opacity: 0.3,
-              marginTop: -35,
+              marginTop: -40,
             }}>
-            FOR
+            𝐅𝐎𝐑
           </CustomText>
           <CustomText
             style={{
-              fontSize: 60,
+              fontSize: 80,
               fontWeight: '900',
               color: 'gray',
               opacity: 0.3,
-              marginTop: -35,
+              marginTop: -40,
             }}>
-            FOOD
+            𝐅𝐎𝐎𝐃
           </CustomText>
 
           <CustomText
@@ -542,7 +538,7 @@ function Home() {
               fontSize: 12,
               color: 'gray',
               opacity: 0.4,
-              marginTop: 30,
+              marginTop: 25,
               fontWeight: '700',
             }}>
             MADE BY FOOD LOVERS
@@ -560,7 +556,7 @@ function Home() {
 
           <View
             style={{
-              width: 80,
+              width: 60,
               height: 2,
               backgroundColor: 'gray',
               opacity: 0.2,

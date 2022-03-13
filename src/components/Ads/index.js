@@ -8,7 +8,7 @@ export const ADS = () => {
     <LinearGradient
       start={{x: 0, y: 0}}
       end={{x: 1, y: 0}}
-      colors={['rgba(255,160,122,0.1)', 'rgba(255,160,122,0.8)']}
+      colors={['white', 'rgba(255, 208, 198 ,0.8)']}
       style={{
         paddingHorizontal: 10,
         paddingVertical: 10,
@@ -17,12 +17,18 @@ export const ADS = () => {
         borderRadius: 8,
       }}>
       <View style={{paddingHorizontal: 15, alignItems: 'center'}}>
-        <CustomText style={{fontSize: 20, fontWeight: '700', letterSpacing: 2}}>
-          ONE
+        <CustomText
+          style={{
+            fontSize: 25,
+            fontWeight: '700',
+            letterSpacing: 1,
+            color: 'red',
+          }}>
+          ơŋɛ
         </CustomText>
       </View>
       <View style={{flex: 1}}>
-        <CustomText>
+        <CustomText style={{color: 'red'}}>
           Get unlimited benefits @75/Month on Restaurants, Instamart & Genie{' '}
           {'<<'}
         </CustomText>

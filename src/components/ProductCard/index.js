@@ -9,38 +9,39 @@ const ProductCard = () => {
       <ImageBackground
         style={{width: 150, height: 100, justifyContent: 'flex-end'}}
         source={{
-          uri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIKj04PI85zVnVmDsQvIMwUkqGqmh5o02g_Q&usqp=CAU',
+          uri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSq0N4K-T-cxHCS-SGLS1C27cAV-DOUCEaU_A&usqp=CAU',
         }}>
         <View
           style={{
             backgroundColor: 'white',
             paddingHorizontal: 5,
             paddingVertical: 3,
-            width: 130,
+            width: 120,
             marginBottom: 10,
             flexDirection: 'row',
             alignItems: 'center',
+            borderRadius:5
           }}>
           <CustomText
             numberOfLines={1}
             style={{color: 'red', fontWeight: '800', fontSize: 11}}>
-            50% OFF
+            60% OFF
           </CustomText>
           <CustomText numberOfLines={1} style={{color: 'red', fontSize: 11}}>
             {' '}
-            UPTO ₹125
+            UPTO ₹180
           </CustomText>
         </View>
       </ImageBackground>
       <CustomText
         numberOfLines={1}
         style={{fontSize: 13, marginBottom: 5, marginTop: 5}}>
-        Veg Saagar Restaurants (Food Court)
+        Charchoal Eats - Biryani & Boyond
       </CustomText>
       <View style={{flexDirection: 'row', alignItems: 'center'}}>
         <Icon2 name="star" size={16} color="gray" />
-        <CustomText style={{fontSize: 11}}> 3.9 - </CustomText>
-        <CustomText style={{fontSize: 11}}> 27 mins</CustomText>
+        <CustomText style={{fontSize: 11}}> 4.2 - </CustomText>
+        <CustomText style={{fontSize: 11}}> 22 mins</CustomText>
       </View>
     </View>
   );

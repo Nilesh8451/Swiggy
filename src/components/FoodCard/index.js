@@ -10,7 +10,7 @@ const index = () => {
         <Image
           style={{width: 80, height: 100, borderRadius: 5}}
           source={{
-            uri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUXc7PKmThijqe5yuxq2xs5g0412oUKVB0yg&usqp=CAU',
+            uri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRw1fd88_HoGmZBJV_t4tpoRk-1682sIXFkJA&usqp=CAU',
           }}
         />
         <View
@@ -30,7 +30,7 @@ const index = () => {
               fontWeight: 'bold',
               textAlign: 'center',
             }}>
-            50% OFF
+            80% OFF
           </CustomText>
           <CustomText
             style={{
@@ -39,7 +39,7 @@ const index = () => {
               fontWeight: 'bold',
               textAlign: 'center',
             }}>
-            UPTO ₹ 125
+            UPTO ₹ 700
           </CustomText>
         </View>
       </View>
@@ -50,19 +50,21 @@ const index = () => {
           justifyContent: 'center',
         }}>
         <CustomText style={{fontSize: 16, fontWeight: 'bold'}}>
-          Absolute China
+          Little King
         </CustomText>
 
         <View style={{flexDirection: 'row', alignItems: 'center'}}>
           <Icon2 name="star" size={20} color="gray" />
-          <CustomText style={{fontSize: 12}}> 3.9 . </CustomText>
-          <CustomText style={{fontSize: 12}}> 27 mins .</CustomText>
-          <CustomText style={{fontSize: 12}}> ₹ 350 for two </CustomText>
+          <CustomText style={{fontSize: 12}}> 3.9 - </CustomText>
+          <CustomText style={{fontSize: 12}}> 34 mins -</CustomText>
+          <CustomText style={{fontSize: 12}}> ₹ 500 for two </CustomText>
         </View>
-        <CustomText style={{fontSize: 12, color: 'gray'}}>
-          Pizzas fast food
+        <CustomText style={{fontSize: 12, color: 'gray', opacity: 0.8}}>
+          North Indian, Chinese, Combo, Desserts
         </CustomText>
-        <CustomText style={{fontSize: 12, color: 'gray'}}>Kothrud</CustomText>
+        <CustomText style={{fontSize: 12, color: 'gray', opacity: 0.8}}>
+          Mira Road
+        </CustomText>
       </View>
     </View>
   );

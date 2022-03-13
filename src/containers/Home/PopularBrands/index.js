@@ -4,7 +4,7 @@ import {CustomText} from '../../../components/Text';
 
 const PopularBrandsCard = props => {
   return (
-    <View style={{width: 90, marginRight: 20, marginBottom: 30, height: 160}}>
+    <View style={{width: 90, marginRight: 20, marginBottom: 20, height: 150}}>
       <View
         style={{
           width: 80,

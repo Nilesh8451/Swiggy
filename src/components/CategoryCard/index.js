@@ -10,12 +10,12 @@ export const CategoryCard = ({title, imgSrc}) => {
         marginLeft: 10,
         marginRight: 10,
         marginBottom: 20,
-        width: 80,
+        width: 70,
       }}>
       <View
         style={{
-          width: 80,
-          height: 80,
+          width: 70,
+          height: 70,
           borderRadius: 15,
           overflow: 'hidden',
           borderWidth: 0.5,
