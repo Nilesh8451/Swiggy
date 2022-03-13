@@ -44,31 +44,6 @@ function Food() {
               marginVertical: 5,
             }}></View>
 
-          <View style={{marginVertical: 10}}>
-            <FlatList
-              horizontal={true}
-              data={[{}, {}, {}, {}]}
-              renderItem={({item}) => {
-                return (
-                  <>
-                    <Image
-                      style={{width: 200, height: 200, marginLeft: 15}}
-                      source={{
-                        uri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5jFcgWcCY8cc9dBdHuOiljZfOZLCy7rEm0g&usqp=CAU',
-                      }}
-                    />
-                    <Image
-                      style={{width: 200, height: 200, marginLeft: 15}}
-                      source={{
-                        uri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_9QlyTKKLc9bxnfId_wsaDsfnMTe08Z9DGQ&usqp=CAU',
-                      }}
-                    />
-                  </>
-                );
-              }}
-            />
-          </View>
-
           <View style={{marginVertical: 10, marginHorizontal: 15}}>
             <FlatList
               horizontal={true}
