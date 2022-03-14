@@ -13,10 +13,11 @@ import AntDesign from 'react-native-vector-icons/AntDesign';
 import InstamartCard from '../../components/InstamartCard';
 import Icon4 from 'react-native-vector-icons/SimpleLineIcons';
 import LinearGradient from 'react-native-linear-gradient';
+import Seperator from '../../components/Seperator';
 
 function Instamart() {
   return (
-    <View style={{flex: 1}}>
+    <View style={{flex: 1,backgroundColor:'white'}}>
       <ScrollView>
         <View
           style={{
@@ -715,87 +716,7 @@ function Instamart() {
           />
         </View>
 
-        <View
-          style={{
-            flexDirection: 'row',
-            alignItems: 'flex-start',
-            justifyContent: 'space-between',
-            marginVertical: 15,
-            marginHorizontal: 15,
-          }}>
-          <View>
-            <CustomText
-              style={{
-                fontSize: 18,
-                fontWeight: 'bold',
-              }}>
-              The Universal Happiness!
-            </CustomText>
-            <CustomText
-              style={{
-                color: 'gray',
-                fontSize: 13,
-              }}>
-              Just one bite to take you into the world of warmth & happiness
-              this Holi.
-            </CustomText>
-          </View>
-          <View style={{flexDirection: 'row', alignItem: 'center', right: 20}}>
-            <CustomText
-              style={{
-                fontSize: 13,
-                marginRight: 5,
-                fontWeight: 'bold',
-              }}>
-              SEE ALL
-            </CustomText>
-            <View
-              style={{
-                backgroundColor: '#F14A16',
-                width: 25,
-                height: 25,
-                alignItems: 'center',
-                justifyContent: 'center',
-                borderRadius: 50,
-              }}>
-              <CustomText
-                style={{
-                  color: 'white',
-                  fontSize: 15,
-                  fontWeight: 'bold',
-                }}>
-                >
-              </CustomText>
-            </View>
-          </View>
-        </View>
-
-        <FlatList
-          showsHorizontalScrollIndicator={false}
-          horizontal={true}
-          data={[{}, {}, {}, {}, {}, {}]}
-          renderItem={({item}) => {
-            return (
-              <View
-                style={{
-                  marginHorizontal: 10,
-                }}>
-                <InstamartCard
-                  image={
-                    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTGSW_IomSz5fhL9kOCZk1YH623j-JlLZ_gg&usqp=CAU'
-                  }
-                />
-              </View>
-            );
-          }}
-        />
-        <View
-          style={{
-            borderColor: '#dddddd',
-            borderWidth: 0.5,
-            marginHorizontal: 15,
-            marginVertical: 20,
-          }}></View>
+       <Seperator/>
 
         <View
           style={{
@@ -817,37 +738,10 @@ function Instamart() {
               style={{
                 color: 'gray',
                 fontSize: 13,
+                marginTop: 5,
               }}>
               Sheild yourself and your loved ones from illness causing germs
             </CustomText>
-          </View>
-          <View style={{flexDirection: 'row', alignItem: 'center', right: 50}}>
-            <CustomText
-              style={{
-                fontSize: 13,
-                marginRight: 5,
-                fontWeight: 'bold',
-              }}>
-              SEE ALL
-            </CustomText>
-            <View
-              style={{
-                backgroundColor: '#F14A16',
-                width: 25,
-                height: 25,
-                alignItems: 'center',
-                justifyContent: 'center',
-                borderRadius: 50,
-              }}>
-              <CustomText
-                style={{
-                  color: 'white',
-                  fontSize: 15,
-                  fontWeight: 'bold',
-                }}>
-                >
-              </CustomText>
-            </View>
           </View>
         </View>
 
@@ -863,7 +757,7 @@ function Instamart() {
                 }}>
                 <InstamartCard
                   image={
-                    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrxhIeUv8oqQGf4h3YNrMm9JP9fN0ts7a6Nw&usqp=CAU'
+                    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZBJJnW15ICxiMy2c_Q37vwei0qZM1DxfezA&usqp=CAU'
                   }
                 />
               </View>
@@ -873,30 +767,29 @@ function Instamart() {
 
         <View
           style={{
-            backgroundColor: '#B8E4F0',
+            backgroundColor: '#f7bac9',
             paddingVertical: 10,
             paddingHorizontal: 15,
             marginTop: 20,
           }}>
           <View>
-            <View style={{flexDirection: 'row', flexWrap: 'wrap'}}>
+            <View
+              style={{flexDirection: 'row', flexWrap: 'wrap', marginTop: 10}}>
               <CustomText
                 style={{
                   fontSize: 18,
-                  color: '#A3423C',
-
+                  color: 'black',
                   fontWeight: 'bold',
                 }}>
-                Irresistible offers
+                Awesome offers
               </CustomText>
               <CustomText
                 style={{
                   fontSize: 18,
-
-                  color: '#A3423C',
+                  color: 'black',
                 }}>
                 {' '}
-                are waiting for yoy
+                are waiting for you
               </CustomText>
             </View>
           </View>
@@ -913,7 +806,7 @@ function Instamart() {
                   }}>
                   <InstamartCard
                     image={
-                      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtim-JlM5hZh4q2IoR14y60k1Bjmt1WNVMkv9b8zj3pBBz3e9NFXip36AM0_uVFormrsI&usqp=CAU'
+                      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWMvuuUszv1YJ9HTUtG47nd1oNbd_ubxUsBw&usqp=CAU'
                     }
                   />
                 </View>
@@ -921,7 +814,6 @@ function Instamart() {
             }}
           />
         </View>
-
       </ScrollView>
     </View>
   );
