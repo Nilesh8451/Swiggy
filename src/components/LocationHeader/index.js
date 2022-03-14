@@ -17,10 +17,11 @@ function LocationHeader() {
         <CustomText
           numberOfLines={1}
           style={{
-            color: '#9AA0A6',
-            fontWeight: '600',
+            color: 'black',
+            fontWeight: '700',
             marginTop: 3,
             fontSize: 13,
+            opacity:0.4
           }}>
           Borivali East, Navghar Road, New Dham Society, Bhayander East
         </CustomText>
@@ -31,10 +32,10 @@ function LocationHeader() {
           flexDirection: 'row',
           alignItems: 'center',
         }}>
-        <Icon2 name="brightness-percent" size={25} color="#900" />
+        <Icon2 name="brightness-percent" size={20} color="#900" />
         <CustomText
           numberOfLines={1}
-          style={{marginLeft: 8, fontWeight: '600'}}>
+          style={{marginLeft: 5, fontWeight: '600'}}>
           Offers
         </CustomText>
       </View>

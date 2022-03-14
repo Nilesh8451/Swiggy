@@ -4,10 +4,10 @@ import {CustomText} from '../../../components/Text';
 
 export const TopPicCard = props => {
   return (
-    <View style={{width: 74, marginRight: 20}}>
+    <View style={{width: 79, marginRight: 20}}>
       <ImageBackground
         style={{
-          width: 74,
+          width: 79,
           height: 85,
           borderRadius: 12,
           overflow: 'hidden',
@@ -50,10 +50,16 @@ export const TopPicCard = props => {
         ) : null}
       </ImageBackground>
       <CustomText
-        style={{fontSize: 12, marginTop: 5, marginLeft: 2, fontWeight: '600'}}>
+        style={{
+          fontSize: 12,
+          marginTop: 5,
+          marginLeft: 5,
+          fontWeight: '600',
+          lineHeight: 18,
+        }}>
         {props.name}
       </CustomText>
-      <CustomText style={{fontSize: 10, marginTop: 5, marginLeft: 2}}>
+      <CustomText style={{fontSize: 10, marginTop: 5, marginLeft: 5}}>
         {props.time}
       </CustomText>
     </View>

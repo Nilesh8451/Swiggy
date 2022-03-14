@@ -19,12 +19,12 @@ export const ADS = () => {
       <View style={{paddingHorizontal: 15, alignItems: 'center'}}>
         <CustomText
           style={{
-            fontSize: 25,
+            fontSize: 26,
             fontWeight: '700',
             letterSpacing: 1,
             color: 'red',
           }}>
-          ơŋɛ
+          ꪮꪀꫀ
         </CustomText>
       </View>
       <View style={{flex: 1}}>

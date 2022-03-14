@@ -267,25 +267,15 @@ function Home() {
             <ADS />
           </View>
         </View>
-        <View style={{alignItems: 'center'}}>
-          <View
-            style={{
-              flexDirection: 'row',
-              flexWrap: 'wrap',
-              justifyContent: 'flex-start',
-              marginTop: 20,
-            }}>
-            {data.map((i, index) => {
-              return (
-                <View key={index}>
-                  <CategoryCard
-                    title={data[index].title}
-                    imgSrc={data[index].imgSrc}
-                  />
-                </View>
-              );
-            })}
-          </View>
+        <View style={{alignItems: 'center', marginTop: 15}}>
+          <FlatList
+            numColumns={4}
+            data={data}
+            keyExtractor={(item, index) => index.toString()}
+            renderItem={({item, index}) => {
+              return <CategoryCard title={item.title} imgSrc={item.imgSrc} />;
+            }}
+          />
         </View>
         <View
           style={{
@@ -324,14 +314,14 @@ function Home() {
             paddingLeft: 15,
             marginTop: 30,
             marginBottom: 10,
-            fontWeight: '800',
-            fontSize: 16,
+            fontWeight: '700',
+            fontSize: 18,
           }}>
           Popular Brands
         </CustomText>
         <ScrollView
-              showsHorizontalScrollIndicator={false}
-              horizontal={true}
+          showsHorizontalScrollIndicator={false}
+          horizontal={true}
           style={{paddingLeft: 15, marginTop: 18, marginBottom: 30}}>
           {popularBrands.map((prod, index) => {
             return (
@@ -349,14 +339,14 @@ function Home() {
             paddingLeft: 15,
             marginTop: 30,
             marginBottom: 10,
-            fontWeight: '800',
-            fontSize: 16,
+            fontWeight: '700',
+            fontSize: 18,
           }}>
           Popular Curations
         </CustomText>
         <ScrollView
           horizontal={true}
-              showsHorizontalScrollIndicator={false}
+          showsHorizontalScrollIndicator={false}
           style={{paddingLeft: 15, marginTop: 18, marginBottom: 30}}>
           {curations.map((prod, index) => {
             return (
@@ -487,8 +477,8 @@ function Home() {
         </CustomText>
 
         <FlatList
-              showsHorizontalScrollIndicator={false}
-              data={[{}, {}, {}, {}, {}, {}]}
+          showsHorizontalScrollIndicator={false}
+          data={[{}, {}, {}, {}, {}, {}]}
           renderItem={({item}) => {
             return (
               <View style={{marginVertical: 20}}>
