@@ -5,7 +5,7 @@ import {CustomText} from '../Text';
 
 const TagCard = props => {
   return (
-    <View style={{maxWidth: 140, height: 40, marginBottom: 10}}>
+    <View style={{maxWidth: 140, height: 35, marginBottom: 10}}>
       <View
         style={{
           paddingHorizontal: 10,

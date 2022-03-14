@@ -6,22 +6,21 @@ import Seperator from '../../components/Seperator';
 import CurationsCard from '../Home/PopularCurations';
 function Search() {
   const history = [
-    {name: 'Shawarma'},
-    {name: 'Dal Khichdi'},
-    {name: 'Shiv Sagar Veg Biryani'},
-    {name: 'Chinese'},
-    {name: 'Borivali Biryani'},
-    {name: 'Chinese'},
+    {name: 'Paneer Masala'},
+    {name: 'Biryani'},
+    {name: 'Paneer Pizza Wadapav'},
+    {name: 'Dal Bati'},
+    {name: 'Puri Bhaji'},
   ];
 
   const curations = [
     {
-      name: 'Vegitables',
+      name: 'Chocolate',
       imageURI:
         'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGTB8X0lJN1Blpe9aos9c8-Oj7lZ0J_pDrgw&usqp=CAU',
     },
     {
-      name: 'Chips',
+      name: 'Milk',
       imageURI:
         'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGTB8X0lJN1Blpe9aos9c8-Oj7lZ0J_pDrgw&usqp=CAU',
     },
@@ -31,12 +30,12 @@ function Search() {
         'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGTB8X0lJN1Blpe9aos9c8-Oj7lZ0J_pDrgw&usqp=CAU',
     },
     {
-      name: 'Chocolate',
+      name: 'Vegitables',
       imageURI:
         'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGTB8X0lJN1Blpe9aos9c8-Oj7lZ0J_pDrgw&usqp=CAU',
     },
     {
-      name: 'Milk',
+      name: 'Chips',
       imageURI:
         'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGTB8X0lJN1Blpe9aos9c8-Oj7lZ0J_pDrgw&usqp=CAU',
     },
@@ -103,8 +102,10 @@ function Search() {
             paddingVertical: 10,
           }}>
           <View>
-            <CustomText>B'day cakes to handpicked treats!</CustomText>
-            <CustomText style={{color: 'purple'}}>
+            <CustomText style={{fontSize: 15}}>
+              B'day cakes to handpicked treats!
+            </CustomText>
+            <CustomText style={{color: '#d537ed', fontWeight: '600'}}>
               Gift them with Swiggy Moments
             </CustomText>
           </View>
@@ -119,17 +120,17 @@ function Search() {
 
         <CustomText
           style={{
-            fontSize: 16,
-            marginTop: 30,
+            fontSize: 18,
+            marginTop: 20,
             paddingLeft: 15,
             fontWeight: '800',
           }}>
           Popular on instamart
         </CustomText>
         <ScrollView
-              showsHorizontalScrollIndicator={false}
-              horizontal={true}
-          style={{paddingLeft: 15, marginTop: 18, marginBottom: 10}}>
+          showsHorizontalScrollIndicator={false}
+          horizontal={true}
+          style={{paddingLeft: 15, marginTop: 20, marginBottom: 10}}>
           {curations.map((prod, index) => {
             return (
               <View>
@@ -143,7 +144,7 @@ function Search() {
 
         <CustomText
           style={{
-            fontSize: 16,
+            fontSize: 18,
             marginTop: 20,
             paddingLeft: 15,
             fontWeight: '800',
@@ -151,8 +152,8 @@ function Search() {
           Popular Cuisines
         </CustomText>
         <ScrollView
-              showsHorizontalScrollIndicator={false}
-              horizontal={true}
+          showsHorizontalScrollIndicator={false}
+          horizontal={true}
           style={{paddingLeft: 15, marginTop: 18, marginBottom: 30}}>
           {curations.map((prod, index) => {
             return (

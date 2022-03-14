@@ -80,17 +80,24 @@ function Account() {
               +91 - 8451834334 - nilesh.chavan@gmail.com
             </CustomText>
           </View>
-          {routes.map(route => {
-            return <More {...route} />;
+          {routes.map((route, index) => {
+            return <More key={index} {...route} />;
           })}
         </View>
 
         <View
-          style={{paddingVertical: 5, backgroundColor: 'white', marginTop: 30}}>
+          style={{paddingVertical: 5, backgroundColor: 'white', marginTop: 25}}>
           <More name="LOGOUT" />
         </View>
 
-        <CustomText style={{fontSize:10,color:'gray',textAlign:'center',marginTop:30,marginBottom:100}}>
+        <CustomText
+          style={{
+            fontSize: 10,
+            color: 'gray',
+            textAlign: 'center',
+            marginTop: 30,
+            marginBottom: 100,
+          }}>
           App version 1.0.0 (1022)
         </CustomText>
       </ScrollView>

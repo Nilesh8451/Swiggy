@@ -3,6 +3,7 @@ import React from 'react';
 import {CustomText} from '../Text';
 import Icon from 'react-native-vector-icons/SimpleLineIcons';
 import {useState} from 'react/cjs/react.development';
+import Seperator from '../../components/Seperator'
 
 const More = props => {
   const [clicked, setClicked] = useState(false);
@@ -46,9 +47,10 @@ const More = props => {
               marginBottom: 10,
             }}></View>
           <View style={{marginBottom: 10}}>
-            {props.list?.map?.(l => {
+            {props.list?.map?.((l,index) => {
               return (
                 <TouchableOpacity
+                key={props.name+index.toString()}
                   style={{
                     flexDirection: 'row',
                     justifyContent: 'space-between',
@@ -68,8 +70,7 @@ const More = props => {
       ) : null}
 
       {props.bottomLine ? (
-        <View
-          style={{height: 1, width: '100%', backgroundColor: 'black'}}></View>
+       <Seperator/>
       ) : null}
     </View>
   );

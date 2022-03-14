@@ -10,65 +10,17 @@ import Seperator from '../../components/Seperator';
 function Food() {
   return (
     <View style={{flex: 1, backgroundColor: 'white'}}>
-      <View style={{paddingHorizontal: 15, paddingTop: 10}}>
-        <LocationHeader />
-      </View>
       <ScrollView>
+        <View style={{paddingHorizontal: 15, paddingTop: 10}}>
+          <LocationHeader />
+        </View>
         <View
           style={{
             borderColor: '#dddddd',
             borderWidth: 0.5,
             marginVertical: 5,
           }}></View>
-        <View style={{marginBottom: 20}}>
-          <View style={{marginVertical: 10, marginHorizontal: 15}}>
-            <FlatList
-              horizontal={true}
-              showsHorizontalScrollIndicator={false}
-              data={[{}, {}, {}, {}, {}, {}, {}]}
-              renderItem={({item}) => {
-                return (
-                  <>
-                    <View>
-                      <View
-                        style={{
-                          backgroundColor: '#dddddd',
-                          width: 50,
-                          height: 30,
-                          marginRight: 20,
-                          marginVertical: 10,
-                          borderRadius: 5,
-                        }}>
-                        <Icon
-                          style={{
-                            marginTop: 15,
-                            position: 'absolute',
-                            // marginLeft: 15,
-                            alignSelf: 'center',
-                          }}
-                          name="medal"
-                          size={22}
-                          color="black"
-                        />
-                      </View>
-                      <CustomText
-                        numberOfLines={2}
-                        style={{
-                          color: 'gray',
-                          fontSize: 12,
-                          width: 50,
-                          textAlign: 'center',
-                        }}>
-                        Top Rated
-                      </CustomText>
-                      <Text numberOfLines={2}></Text>
-                    </View>
-                  </>
-                );
-              }}
-            />
-          </View>
-
+        <View style={{marginBottom: 20, marginTop: 20}}>
           <View
             style={{
               flexDirection: 'row',
@@ -101,7 +53,7 @@ function Food() {
             </View>
           </View>
           <FlatList
-              showsHorizontalScrollIndicator={false}
+            showsHorizontalScrollIndicator={false}
             data={[{}, {}, {}, {}]}
             renderItem={({item}) => {
               return (
@@ -115,7 +67,13 @@ function Food() {
         <Seperator />
         <View style={{marginVertical: 10}}>
           <CustomText
-            style={{paddingHorizontal: 15, marginTop: 20, fontWeight: 'bold'}}>
+            style={{
+              paddingHorizontal: 15,
+              fontSize: 18,
+              marginTop: 20,
+              fontWeight: 'bold',
+              marginBottom:10
+            }}>
             Restaurants Curated For
           </CustomText>
 
@@ -179,8 +137,8 @@ function Food() {
 
         <FlatList
           style={{marginTop: 20}}
-              showsHorizontalScrollIndicator={false}
-              data={[{}, {}, {}, {}]}
+          showsHorizontalScrollIndicator={false}
+          data={[{}, {}, {}, {}]}
           renderItem={({item}) => {
             return (
               <View style={{marginVertical: 15}}>
@@ -222,8 +180,8 @@ function Food() {
 
         <FlatList
           style={{marginTop: 20, marginBottom: 20}}
-              showsHorizontalScrollIndicator={false}
-              data={[{}, {}, {}, {}, {}, {}]}
+          showsHorizontalScrollIndicator={false}
+          data={[{}, {}, {}, {}, {}, {}]}
           renderItem={({item}) => {
             return (
               <View style={{marginVertical: 10}}>
@@ -247,8 +205,8 @@ function Food() {
 
           <FlatList
             horizontal={true}
-              showsHorizontalScrollIndicator={false}
-              data={[{}, {}, {}, {}, {}]}
+            showsHorizontalScrollIndicator={false}
+            data={[{}, {}, {}, {}, {}]}
             renderItem={({item}) => {
               return (
                 <View style={{marginVertical: 10}}>
@@ -262,8 +220,8 @@ function Food() {
 
         <FlatList
           style={{marginTop: 20, marginBottom: 20}}
-              showsHorizontalScrollIndicator={false}
-              data={[{}, {}, {}, {}, {}, {}, {}]}
+          showsHorizontalScrollIndicator={false}
+          data={[{}, {}, {}, {}, {}, {}, {}]}
           renderItem={({item}) => {
             return (
               <View style={{marginVertical: 10}}>
@@ -287,8 +245,8 @@ function Food() {
 
           <FlatList
             horizontal={true}
-              showsHorizontalScrollIndicator={false}
-              data={[{}, {}, {}, {}, {}]}
+            showsHorizontalScrollIndicator={false}
+            data={[{}, {}, {}, {}, {}]}
             renderItem={({item}) => {
               return (
                 <View style={{marginVertical: 10}}>

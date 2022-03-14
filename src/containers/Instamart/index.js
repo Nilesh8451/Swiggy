@@ -33,7 +33,7 @@ function Instamart() {
               fontWeight: 'bold',
               textAlign: 'center',
             }}>
-            ιηѕтαмαят
+            iຖŞtค๓คrt
           </CustomText>
         </View>
         <View
@@ -78,7 +78,7 @@ function Instamart() {
         <LinearGradient
           start={{x: 0, y: 0}}
           end={{x: 1, y: 0}}
-          colors={['white', 'rgba(255, 208, 198 ,0.8)']}
+          colors={['white', 'rgba(255, 128, 198 ,0.5)']}
           style={{
             paddingHorizontal: 10,
             paddingVertical: 10,
@@ -94,7 +94,7 @@ function Instamart() {
               paddingRight: 10,
               fontWeight: 'bold',
             }}>
-            ơŋɛ
+            ꪮꪀꫀ
           </CustomText>
           <View style={{flexDirection: 'column'}}>
             <View style={{flexDirection: 'row'}}>
@@ -132,6 +132,67 @@ function Instamart() {
             </View>
           </View>
         </LinearGradient>
+
+        <View style={{paddingHorizontal: 15}}>
+          <CustomText
+            style={{
+              fontSize: 16,
+              fontWeight: 'bold',
+              marginVertical: 15,
+            }}>
+            Coupons for you
+          </CustomText>
+          <FlatList
+            showsHorizontalScrollIndicator={false}
+            horizontal={true}
+            data={[{}, {}, {}, {}, {}]}
+            renderItem={({item}) => {
+              return (
+                <View style={{flexDirection: 'row', marginRight: 10}}>
+                  <View
+                    style={{
+                      backgroundColor: '#b9faf2',
+                      padding: 10,
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                    }}>
+                    <Image
+                      resizeMode="contain"
+                      style={{width: 50, height: 50, borderRadius: 5}}
+                      source={{
+                        uri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTmyWF8BSixpltiRjUYNVoM39t9NVUlC9lng&usqp=CAU',
+                      }}
+                    />
+                  </View>
+
+                  <View
+                    style={{
+                      backgroundColor: '#9bd4cd',
+                      width: 220,
+                      // height: 60,
+                      paddingHorizontal: 10,
+                      justifyContent: 'center',
+                      marginLeft: 1,
+                    }}>
+                    <CustomText
+                      style={{
+                        fontSize: 14,
+                        fontWeight: 'bold',
+                      }}>
+                      Free delivery on first 2 orders
+                    </CustomText>
+                    <CustomText
+                      style={{
+                        fontSize: 13,
+                      }}>
+                      Use Code FASTTWO
+                    </CustomText>
+                  </View>
+                </View>
+              );
+            }}
+          />
+        </View>
         <View style={{paddingHorizontal: 15}}>
           <View
             style={{
@@ -140,12 +201,13 @@ function Instamart() {
               justifyContent: 'space-between',
               marginVertical: 15,
               alignItems: 'center',
+              marginTop: 30,
             }}>
             <View>
               <CustomText
                 style={{
                   fontSize: 16,
-                  fontWeight: '800',
+                  fontWeight: '700',
                 }}>
                 Frequently brought items
               </CustomText>
@@ -165,7 +227,7 @@ function Instamart() {
                 style={{
                   marginLeft: 8,
                   padding: 5,
-                  backgroundColor: '#FF7F50',
+                  backgroundColor: 'orange',
                   borderRadius: 30,
                 }}>
                 <Icon4 name="arrow-right" size={12} color="white" />
@@ -180,7 +242,7 @@ function Instamart() {
               return (
                 <InstamartCard
                   image={
-                    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQV4uRxDBnbZ9QVRkLsXldBsUc3CUQX369rQg&usqp=CAU'
+                    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdoY5yKA3R6zQn_ZrCGPHJsYV2QoNZo_Nzww&usqp=CAU'
                   }
                 />
               );
@@ -197,82 +259,22 @@ function Instamart() {
                     <Image
                       resizeMode="cover"
                       style={{
-                        width: 300,
-                        height: 200,
+                        width: 280,
+                        height: 180,
                         borderRadius: 5,
                         marginRight: 15,
                       }}
                       source={{
-                        uri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTy7Q47bULjfjqf7KEsnfsKD5TDyR51m5iRcQ&usqp=CAU',
+                        uri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTf7nMr_qjiT00CVZESzzdRRJWgsJG34Amykg&usqp=CAU',
                       }}
                     />
                     <Image
-                      style={{width: 300, height: 200, marginRight: 15}}
+                      style={{width: 280, height: 180, marginRight: 15}}
                       source={{
-                        uri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSl9782YJdsAnSYS7E7C9DAuYQd3q6mVhyIHA&usqp=CAU',
+                        uri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHDoF03InixkFf05LEnbcTcIzP33J0wmHQPw&usqp=CAU',
                       }}
                     />
                   </>
-                );
-              }}
-            />
-
-            <CustomText
-              style={{
-                fontSize: 16,
-                fontWeight: 'bold',
-                marginVertical: 15,
-              }}>
-              Coupons for you
-            </CustomText>
-            <FlatList
-              showsHorizontalScrollIndicator={false}
-              horizontal={true}
-              data={[{}, {}, {}, {}, {}]}
-              renderItem={({item}) => {
-                return (
-                  <View style={{flexDirection: 'row', marginRight: 10}}>
-                    <View
-                      style={{
-                        backgroundColor: '#F8EEEC',
-                        width: 60,
-                        height: 60,
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                      }}>
-                      <Image
-                        resizeMode="contain"
-                        style={{width: 50, height: 50}}
-                        source={{
-                          uri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzLAyOicIWbKKJYvlV6lz1JRKsxe8nk-rEgw&usqp=CAU',
-                        }}
-                      />
-                    </View>
-
-                    <View
-                      style={{
-                        backgroundColor: '#FBEAEA',
-                        width: 220,
-                        height: 60,
-                        paddingHorizontal: 10,
-                        justifyContent: 'center',
-                        marginLeft: 1,
-                      }}>
-                      <CustomText
-                        style={{
-                          fontSize: 14,
-                          fontWeight: 'bold',
-                        }}>
-                        Free delivery on first 2 orders
-                      </CustomText>
-                      <CustomText
-                        style={{
-                          fontSize: 13,
-                        }}>
-                        Use Code FASTTWO
-                      </CustomText>
-                    </View>
-                  </View>
                 );
               }}
             />
@@ -287,82 +289,119 @@ function Instamart() {
               }}>
               Shop by category
             </CustomText>
-
-            <FlatList
-              numColumns={4}
-              data={[
-                {},
-                {},
-                {},
-                {},
-                {},
-                {},
-                {},
-                {},
-                {},
-                {},
-                {},
-                {},
-                {},
-                {},
-                {},
-                {},
-              ]}
-              showsHorizontalScrollIndicator={false}
-              renderItem={({item}) => {
-                return (
-                  <>
-                    <View
-                      style={{
-                        marginRight: 13,
-                        borderRadius: 5,
-                      }}>
-                      <Image
-                        style={{width: 80, height: 80, marginTop: 10}}
-                        source={{
-                          uri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSd5oLr7zSpbF6DJEW621D95uZqWZVBVUR5Ag&usqp=CAU',
-                        }}
-                      />
-                      <CustomText
-                        numberOfLines={2}
+            <View style={{alignItems: 'center'}}>
+              <FlatList
+                numColumns={4}
+                data={[
+                  {
+                    name: 'Paneer',
+                    uri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTa13z5dI0EO8N9tghVZSHSGhTT0iqbhyrMvg&usqp=CAU',
+                  },
+                  {
+                    name: 'Paneer',
+                    uri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCnhcBGvC7kgq11ave8mhMbbGZI6Pf1IDUkw&usqp=CAU',
+                  },
+                  {
+                    name: 'Paneer',
+                    uri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRF3G40jnzD2Q7rgPDJwE_CIuFGPuYAkliR5w&usqp=CAU',
+                  },
+                  {
+                    name: 'Paneer',
+                    uri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDw0zfbjExXcN9ajtY8DpFJZBBGak2nIjAvw&usqp=CAU',
+                  },
+                  {
+                    name: 'Paneer',
+                    uri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOu3y8mMz_myEB90OA-9m7a0WoNTN1_TUvzw&usqp=CAU',
+                  },
+                  {
+                    name: 'Paneer',
+                    uri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSK1bPJyZFSVNJArocOLzfbkRMC5_GsbZFUfw&usqp=CAU',
+                  },
+                  {
+                    name: 'Paneer',
+                    uri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrE7tfAUNho0I9lQzKYLKUSOZV9Gtz2LjsVw&usqp=CAU',
+                  },
+                  {
+                    name: 'Paneer',
+                    uri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDmKQQcKahvWsP6iwmB8X4Eohtpz93kFEa6Q&usqp=CAU',
+                  },
+                  {
+                    name: 'Paneer',
+                    uri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOu3y8mMz_myEB90OA-9m7a0WoNTN1_TUvzw&usqp=CAU',
+                  },
+                  {
+                    name: 'Paneer',
+                    uri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSK1bPJyZFSVNJArocOLzfbkRMC5_GsbZFUfw&usqp=CAU',
+                  },
+                  {
+                    name: 'Paneer',
+                    uri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrE7tfAUNho0I9lQzKYLKUSOZV9Gtz2LjsVw&usqp=CAU',
+                  },
+                  {
+                    name: 'Paneer',
+                    uri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDmKQQcKahvWsP6iwmB8X4Eohtpz93kFEa6Q&usqp=CAU',
+                  },
+                  {
+                    name: 'Paneer',
+                    uri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOu3y8mMz_myEB90OA-9m7a0WoNTN1_TUvzw&usqp=CAU',
+                  },
+                  {
+                    name: 'Paneer',
+                    uri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSK1bPJyZFSVNJArocOLzfbkRMC5_GsbZFUfw&usqp=CAU',
+                  },
+                  {
+                    name: 'Paneer',
+                    uri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrE7tfAUNho0I9lQzKYLKUSOZV9Gtz2LjsVw&usqp=CAU',
+                  },
+                  {
+                    name: 'Paneer',
+                    uri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDmKQQcKahvWsP6iwmB8X4Eohtpz93kFEa6Q&usqp=CAU',
+                  },
+                ]}
+                showsHorizontalScrollIndicator={false}
+                renderItem={({item}) => {
+                  return (
+                    <>
+                      <View
                         style={{
-                          fontSize: 12,
-                          width: 70,
-                          marginVertical: 5,
-                          textAlign: 'center',
-                          lineHeight: 19,
+                          marginRight: 10,
+                          borderRadius: 5,
                         }}>
-                        Dairy,Bread and Eggs
-                      </CustomText>
-                    </View>
-                    <View style={{marginRight: 13, borderRadius: 5}}>
-                      <Image
-                        style={{width: 80, height: 80, marginTop: 10}}
-                        source={{
-                          uri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSd5oLr7zSpbF6DJEW621D95uZqWZVBVUR5Ag&usqp=CAU',
-                        }}
-                      />
-                      <CustomText
-                        numberOfLines={2}
-                        style={{
-                          fontSize: 12,
-                          width: 70,
-                          marginVertical: 5,
-                          textAlign: 'center',
-                        }}>
-                        Fruits and Vegetables
-                      </CustomText>
-                    </View>
-                  </>
-                );
-              }}
-            />
+                        <Image
+                          style={{
+                            width: 75,
+                            height: 75,
+                            marginTop: 10,
+                            borderRadius: 10,
+                          }}
+                          source={{
+                            uri: item.uri,
+                          }}
+                        />
+                        <CustomText
+                          numberOfLines={2}
+                          style={{
+                            fontSize: 13,
+                            marginVertical: 5,
+                            textAlign: 'center',
+                            lineHeight: 19,
+                            fontWeight: '600',
+                            opacity: 0.7,
+                          }}>
+                          {item.name}
+                        </CustomText>
+                      </View>
+                    </>
+                  );
+                }}
+              />
+            </View>
           </View>
         </View>
 
         <View
           style={{
-            backgroundColor: 'rgba(253, 188, 180,0.3)',
+            backgroundColor: 'rgba(38, 87, 235,0.1)',
             paddingVertical: 15,
             paddingHorizontal: 15,
             marginVertical: 40,
@@ -401,27 +440,27 @@ function Instamart() {
                     alignItems: 'center',
                     width: 130,
                     height: 145,
-                    borderRadius: 12,
+                    borderRadius: 8,
                     marginVertical: 10,
-                    borderColor: 'red',
+                    borderColor: 'black',
                     borderWidth: 0.6,
                     marginRight: 20,
                     overflow: 'hidden',
                   }}>
                   <CustomText
                     style={{
-                      fontSize: 18,
+                      fontSize: 16,
                       fontWeight: 'bold',
                       color: 'red',
                     }}>
-                    upto 30% off
+                    upto 70% off
                   </CustomText>
                   <CustomText
                     style={{
                       fontSize: 18,
                       color: '#A3423C',
                     }}>
-                    -----
+                    ---
                   </CustomText>
                   <CustomText
                     style={{
@@ -429,12 +468,12 @@ function Instamart() {
                       color: '#A3423C',
                       textAlign: 'center',
                     }}>
-                    Fruits & Veggies Market
+                    Fruits Market
                   </CustomText>
                   <Image
-                    style={{width: 90, height: 50, marginTop: 5}}
+                    style={{width: 90, height: 80, marginTop: 10}}
                     source={{
-                      uri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRD8sNxfHdK5bObndZOFyTNft0i_nB5E6WipQ&usqp=CAU',
+                      uri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT67evcrI2WUip8dtI0FP7awtxE6eQpXuHajg&usqp=CAU',
                     }}
                   />
                 </View>
@@ -463,14 +502,14 @@ function Instamart() {
                   <View style={{flexDirection: 'row'}}>
                     <ImageBackground
                       style={{
-                        width: 150,
-                        height: 150,
+                        width: 160,
+                        height: 180,
                         marginRight: 20,
-                        borderRadius: 20,
+                        borderRadius: 10,
                         overflow: 'hidden',
                       }}
                       source={{
-                        uri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-20s0lLuJERJdbCD7CLyxCPYCHNAPfKEDVg&usqp=CAU',
+                        uri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMAJ0diw-sm_H6SsnIgvOn22Du3MzrKye7ng&usqp=CAU',
                       }}>
                       <CustomText
                         style={{
@@ -482,19 +521,19 @@ function Instamart() {
                           marginTop: 10,
                           marginLeft: 5,
                         }}>
-                        Awesome food collection over it
+                        Engery Drink To Bring You Back
                       </CustomText>
                     </ImageBackground>
                     <ImageBackground
                       style={{
-                        width: 150,
-                        height: 150,
+                        width: 160,
+                        height: 180,
                         marginRight: 20,
-                        borderRadius: 20,
+                        borderRadius: 10,
                         overflow: 'hidden',
                       }}
                       source={{
-                        uri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0Knwo1weP93D6XMQtg-T6sdAQa-L55y1_gA&usqp=CAU',
+                        uri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQR-9iBn1400BrZ_S38MIyFyl6SDmlq7jWjgw&usqp=CAU',
                       }}>
                       <CustomText
                         style={{
@@ -506,7 +545,7 @@ function Instamart() {
                           marginTop: 10,
                           marginLeft: 5,
                         }}>
-                        Never stop beign foody
+                        Drink And Fire On Alarms
                       </CustomText>
                     </ImageBackground>
                   </View>
@@ -514,14 +553,14 @@ function Instamart() {
                   <View style={{flexDirection: 'row', marginTop: 20}}>
                     <ImageBackground
                       style={{
-                        width: 150,
-                        height: 150,
+                        width: 160,
+                        height: 180,
                         marginRight: 20,
-                        borderRadius: 20,
+                        borderRadius: 10,
                         overflow: 'hidden',
                       }}
                       source={{
-                        uri: 'https://cpb-us-w2.wpmucdn.com/blog.smu.edu/dist/d/10/files/2010/11/heinz_ketchup_21.jpg',
+                        uri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8G3i5eVr2unVT8XgUf5Vsa7WBR3mzrs5GXA&usqp=CAU',
                       }}>
                       <CustomText
                         style={{
@@ -533,19 +572,19 @@ function Instamart() {
                           marginTop: 10,
                           marginLeft: 5,
                         }}>
-                        What's holi tested like
+                        Coco Cola To Show You Like Cool
                       </CustomText>
                     </ImageBackground>
                     <ImageBackground
                       style={{
-                        width: 150,
-                        height: 150,
+                        width: 160,
+                        height: 180,
                         marginRight: 20,
                         borderRadius: 20,
                         overflow: 'hidden',
                       }}
                       source={{
-                        uri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0Knwo1weP93D6XMQtg-T6sdAQa-L55y1_gA&usqp=CAU',
+                        uri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSofcR4yxMBn2LXTJ-gj_HKI3YTLBDnDlE5pg&usqp=CAU',
                       }}>
                       <CustomText
                         style={{
@@ -557,7 +596,7 @@ function Instamart() {
                           marginTop: 10,
                           marginLeft: 5,
                         }}>
-                        What's holi tested like
+                        Hope You Are Doing Good
                       </CustomText>
                     </ImageBackground>
                   </View>
@@ -587,8 +626,8 @@ function Instamart() {
           </CustomText>
           <FlatList
             horizontal={true}
-              showsHorizontalScrollIndicator={false}
-              data={[{}, {}, {}, {}, {}, {}, {}, {}]}
+            showsHorizontalScrollIndicator={false}
+            data={[{}, {}, {}, {}, {}, {}, {}, {}]}
             renderItem={({item}) => {
               return (
                 <View style={{marginVertical: 15, flexDirection: 'row'}}>
@@ -883,251 +922,6 @@ function Instamart() {
           />
         </View>
 
-        <View
-          style={{
-            backgroundColor: '#FFFCDC',
-            paddingVertical: 10,
-            paddingHorizontal: 15,
-          }}>
-          <View>
-            <View style={{flexDirection: 'row', flexWrap: 'wrap'}}>
-              <CustomText
-                style={{
-                  fontSize: 18,
-                  color: '#A3423C',
-
-                  fontWeight: 'bold',
-                }}>
-                Fresh Vegitable
-              </CustomText>
-              <CustomText
-                style={{
-                  fontSize: 18,
-
-                  color: '#A3423C',
-                }}>
-                {' '}
-                Vegetables that have balanced nutrients for a healthy lifestyle
-              </CustomText>
-            </View>
-          </View>
-          <FlatList
-            showsHorizontalScrollIndicator={false}
-            horizontal={true}
-            data={[{}, {}, {}, {}, {}, {}]}
-            renderItem={({item}) => {
-              return (
-                <View
-                  style={{
-                    marginHorizontal: 10,
-                    marginVertical: 20,
-                  }}>
-                  <InstamartCard
-                    image={
-                      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqDvfDInFcsz3Hb6nH1Xl0SVDtQV6xiMqWfQ&usqp=CAU'
-                    }
-                  />
-                </View>
-              );
-            }}
-          />
-        </View>
-        <View
-          style={{
-            backgroundColor: '#CEE5D0',
-            paddingVertical: 10,
-            paddingHorizontal: 15,
-          }}>
-          <View>
-            <View style={{flexDirection: 'row', flexWrap: 'wrap'}}>
-              <CustomText
-                style={{
-                  fontSize: 18,
-                  color: '#A3423C',
-
-                  fontWeight: 'bold',
-                }}>
-                Breakfast needs
-              </CustomText>
-              <CustomText
-                style={{
-                  fontSize: 18,
-
-                  color: '#A3423C',
-                }}>
-                {' '}
-                Sorted with fresh bread and eggs
-              </CustomText>
-            </View>
-          </View>
-          <FlatList
-            showsHorizontalScrollIndicator={false}
-            horizontal={true}
-            data={[{}, {}, {}, {}, {}, {}]}
-            renderItem={({item}) => {
-              return (
-                <View
-                  style={{
-                    marginHorizontal: 10,
-                    marginVertical: 20,
-                  }}>
-                  <InstamartCard
-                    image={
-                      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxHnGQIy-Ips7QPQmsp8dCn6wZpQp1aJbs8A&usqp=CAU'
-                    }
-                  />
-                </View>
-              );
-            }}
-          />
-        </View>
-        <View
-          style={{
-            backgroundColor: '#FEF5ED',
-            paddingVertical: 10,
-            paddingHorizontal: 15,
-          }}>
-          <View>
-            <View style={{flexDirection: 'row', flexWrap: 'wrap'}}>
-              <CustomText
-                style={{
-                  fontSize: 18,
-                  color: '#A3423C',
-
-                  fontWeight: 'bold',
-                }}>
-                Your Holi laundry
-              </CustomText>
-              <CustomText
-                style={{
-                  fontSize: 18,
-
-                  color: '#A3423C',
-                }}>
-                {' '}
-                is stored with ariel
-              </CustomText>
-            </View>
-          </View>
-          <FlatList
-            showsHorizontalScrollIndicator={false}
-            horizontal={true}
-            data={[{}, {}, {}, {}, {}, {}]}
-            renderItem={({item}) => {
-              return (
-                <View
-                  style={{
-                    marginHorizontal: 10,
-                    marginVertical: 20,
-                  }}>
-                  <InstamartCard
-                    image={
-                      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9dS7HGabIfSwe_NyUJZhJkVrd4nUMTFmAGQ&usqp=CAU'
-                    }
-                  />
-                </View>
-              );
-            }}
-          />
-        </View>
-        <View
-          style={{
-            backgroundColor: '#FFCCD2',
-            paddingVertical: 10,
-            paddingHorizontal: 15,
-          }}>
-          <View>
-            <View style={{flexDirection: 'row', flexWrap: 'wrap'}}>
-              <CustomText
-                style={{
-                  fontSize: 18,
-                  color: '#A3423C',
-
-                  fontWeight: 'bold',
-                }}>
-                Staple collection
-              </CustomText>
-              <CustomText
-                style={{
-                  fontSize: 18,
-
-                  color: '#A3423C',
-                }}>
-                {' '}
-                All The kitchen staples are now under one roof
-              </CustomText>
-            </View>
-          </View>
-          <FlatList
-            showsHorizontalScrollIndicator={false}
-            horizontal={true}
-            data={[{}, {}, {}, {}, {}, {}]}
-            renderItem={({item}) => {
-              return (
-                <View
-                  style={{
-                    marginHorizontal: 10,
-                    marginVertical: 20,
-                  }}>
-                  <InstamartCard
-                    image={
-                      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQt3qBNBP9AXpHK_o_n8PGf8VXxolKY-km4Og&usqp=CAU'
-                    }
-                  />
-                </View>
-              );
-            }}
-          />
-        </View>
-        <View
-          style={{
-            backgroundColor: '#CEE5D0',
-            paddingVertical: 10,
-            paddingHorizontal: 15,
-          }}>
-          <View>
-            <View style={{flexDirection: 'row', flexWrap: 'wrap'}}>
-              <CustomText
-                style={{
-                  fontSize: 18,
-                  color: '#A3423C',
-
-                  fontWeight: 'bold',
-                }}>
-                Delicious juice & fruits drinks
-              </CustomText>
-              <CustomText
-                style={{
-                  fontSize: 18,
-
-                  color: '#A3423C',
-                }}>
-                {' '}
-                to whip amazing beverage & refreshment
-              </CustomText>
-            </View>
-          </View>
-          <FlatList
-            showsHorizontalScrollIndicator={false}
-            horizontal={true}
-            data={[{}, {}, {}, {}, {}, {}]}
-            renderItem={({item}) => {
-              return (
-                <View
-                  style={{
-                    marginHorizontal: 10,
-                    marginVertical: 20,
-                  }}>
-                  <InstamartCard
-                    image={
-                      'https://5.imimg.com/data5/IY/HN/MY-25220361/thumbsup-500x500.jpg'
-                    }
-                  />
-                </View>
-              );
-            }}
-          />
-        </View>
       </ScrollView>
     </View>
   );

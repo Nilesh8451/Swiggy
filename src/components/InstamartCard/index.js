@@ -24,28 +24,28 @@ const index = ({image}) => {
             marginTop: 5,
             fontWeight: 'bold',
           }}>
-          Milky Milk Taza Milk
+          Paneer Pure Plate Roha
         </CustomText>
         <CustomText
           style={{
             fontSize: 12,
             color: 'gray',
           }}>
-          800ml
+          300ml
         </CustomText>
         <CustomText
           style={{
             fontSize: 12,
             fontWeight: 'bold',
           }}>
-          Price: ₹90
+          Price: ₹100
         </CustomText>
       </View>
       <View
         style={{
-          backgroundColor: 'gray',
-          width: 30,
-          height: 30,
+          backgroundColor: 'black',
+          width: 28,
+          height: 28,
           alignItems: 'center',
           justifyContent: 'center',
           position: 'absolute',
